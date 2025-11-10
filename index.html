@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arjun Portfolio</title>
+    <meta
+      name="description"
+      content="Professional portfolio of Arjun, an AI/ML engineer specializing in machine learning, deep learning, and modern web technologies with an anime-inspired design."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, AI, machine learning, deep learning, tensorflow, pytorch, python, anime, modern, responsive"
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Anime-style Typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Styles for Animations -->
+    <link rel="stylesheet" href="static/style/styles.css" />
+  </head>
+  <body
+    class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white font-['Poppins'] overflow-x-hidden"
+  >
+    <!-- Floating Sidebar -->
+    <div
+      id="floating-sidebar"
+      class="fixed left-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block"
+    >
+      <div class="space-y-4">
+        <a
+          href="#hero"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="hero"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#about"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="about"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#skills"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="skills"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#projects"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="projects"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#tech-stack"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="tech-stack"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#blog"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="blog"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#contact"
+          class="sidebar-link w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+          data-section="contact"
+        >
+          <svg
+            class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 z-50 backdrop-blur-md"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center"
+          >
+            <span class="text-white font-bold text-lg">🤖</span>
+          </div>
+          <div class="text-2xl font-bold anime-text">Welcome</div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-8">
+          <a
+            href="#hero"
+            class="nav-link text-white hover:text-pink-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">Home</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#about"
+            class="nav-link text-white hover:text-blue-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">About</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#skills"
+            class="nav-link text-white hover:text-green-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">AI/ML Skills</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-teal-500 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#projects"
+            class="nav-link text-white hover:text-yellow-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">Projects</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#tech-stack"
+            class="nav-link text-white hover:text-yellow-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">Tech Stack</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#blog"
+            class="nav-link text-white hover:text-indigo-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">Blog</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+          <a
+            href="#contact"
+            class="nav-link text-white hover:text-purple-400 transition duration-300 text-sm font-medium relative group"
+          >
+            <span class="relative z-10">Contact</span>
+            <div
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"
+            ></div>
+          </a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <div
+            class="hidden md:flex items-center space-x-2 text-sm text-gray-300"
+          >
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span>Available for AI/ML Projects</span>
+          </div>
+
+          <div class="lg:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-white focus:outline-none p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition duration-300"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-black bg-opacity-95 backdrop-blur-md border-t border-white border-opacity-10"
+      >
+        <div class="container mx-auto px-4 py-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#hero"
+              class="nav-link text-white hover:text-pink-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >🏠 Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-white hover:text-blue-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >👨‍💻 About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-white hover:text-green-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >🤖 AI/ML Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-white hover:text-yellow-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >🚀 Projects</a
+            >
+            <a
+              href="#tech-stack"
+              class="nav-link text-white hover:text-yellow-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >💻 Tech Stack</a
+            >
+            <a
+              href="#blog"
+              class="nav-link text-white hover:text-indigo-400 transition duration-300 py-2 border-b border-white border-opacity-10"
+              >📚 Blog</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-white hover:text-purple-400 transition duration-300"
+              >📧 Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="h-screen flex flex-col justify-center items-center relative overflow-hidden"
+    >
+      <!-- AI/ML Themed Background -->
+      <div class="absolute inset-0">
+        <!-- Neural Network Pattern -->
+        <div class="absolute inset-0 opacity-10">
+          <svg
+            class="w-full h-full"
+            viewBox="0 0 1000 1000"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="neural"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="20" cy="20" r="2" fill="#ff6b9d" opacity="0.6" />
+                <circle cx="80" cy="20" r="2" fill="#4ecdc4" opacity="0.6" />
+                <circle cx="50" cy="50" r="2" fill="#45b7d1" opacity="0.6" />
+                <circle cx="20" cy="80" r="2" fill="#ff6b9d" opacity="0.6" />
+                <circle cx="80" cy="80" r="2" fill="#4ecdc4" opacity="0.6" />
+                <line
+                  x1="20"
+                  y1="20"
+                  x2="50"
+                  y2="50"
+                  stroke="#ff6b9d"
+                  stroke-width="0.5"
+                  opacity="0.3"
+                />
+                <line
+                  x1="80"
+                  y1="20"
+                  x2="50"
+                  y2="50"
+                  stroke="#4ecdc4"
+                  stroke-width="0.5"
+                  opacity="0.3"
+                />
+                <line
+                  x1="20"
+                  y1="80"
+                  x2="50"
+                  y2="50"
+                  stroke="#45b7d1"
+                  stroke-width="0.5"
+                  opacity="0.3"
+                />
+                <line
+                  x1="80"
+                  y1="80"
+                  x2="50"
+                  y2="50"
+                  stroke="#ff6b9d"
+                  stroke-width="0.5"
+                  opacity="0.3"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural)" />
+          </svg>
+        </div>
+
+        <!-- Animated AI Elements -->
+        <div
+          class="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <div class="text-center z-10">
+        <div class="mb-6">
+          <span
+            class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-sm font-medium text-white mb-4 animate-pulse"
+          >
+            🤖 Hello, I Am
+          </span>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 anime-text typing">
+          Arjun
+        </h1>
+        <p
+          class="text-xl md:text-3xl text-gray-300 mb-8 fade-in-up font-light"
+          style="animation-delay: 3s"
+        >
+          Building intelligent systems with Python, Deep Learning & LLMs
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+        >
+          <a
+            href="#projects"
+            class="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-sm glow flex items-center space-x-2"
+          >
+            <span>🧠</span>
+            <span>View My AI Projects</span>
+          </a>
+          <a
+            href="#contact"
+            class="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition duration-300 flex items-center space-x-2"
+          >
+            <span>📧</span>
+            <span>Let's Collaborate</span>
+          </a>
+        </div>
+
+        <!-- Tech Stack Preview -->
+        <div class="flex flex-wrap justify-center gap-4 mt-8 opacity-75">
+          <div
+            class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20"
+          >
+            LangChain
+          </div>
+          <div
+            class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20"
+          >
+            LlamaIndex
+          </div>
+          <div
+            class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20"
+          >
+            Transformers
+          </div>
+          <div
+            class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20"
+          >
+            PyTorch
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <div
+          class="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+        >
+          <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <!-- Removed floating icons -->
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 anime-text">
+            About Me
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="slide-in-left">
+            <div class="relative">
+              <img
+                src="image/Moody.png"
+                alt="Arjun - Full Stack Developer"
+                class="w-full h-full rounded-2xl mx-auto shadow-2xl object-cover border-4 border-white neon-border"
+              />
+              <div
+                class="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg"
+              >
+                3+
+              </div>
+              <div
+                class="absolute -top-4 -left-4 bg-white rounded-full p-3 shadow-lg"
+              >
+                <span class="text-2xl">🚀</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-in-right space-y-6">
+            <div class="space-y-4">
+              <p class="text-xl leading-relaxed text-gray-300">
+                Hi there! I'm
+                <span class="font-bold text-purple-600">Arjun</span>, Currently
+                exploring AI in depth with a focus on building real-world
+                intelligent systems. I specialize in Artificial Intelligence ×
+                Full-Stack Development, creating solutions that leverage the
+                latest advancements in machine learning.
+              </p>
+              <p class="text-lg leading-relaxed text-gray-300">
+                My journey in tech began with a fascination for AI and
+                problem-solving, driving me to explore LLMs, Vector Databases,
+                RAG, Generative AI, and Reinforcement Learning. I enjoy turning
+                complex ideas into practical applications that make a
+                difference..
+              </p>
+              <p class="text-lg leading-relaxed text-gray-300">
+                When I'm not training models or building AI-powered
+                applications, you'll find me contributing to open-source
+                projects, experimenting with new neural architectures, or
+                learning the latest trends in AI research. I firmly believe in
+                continuous learning and pushing the boundaries of what’s
+                possible with artificial intelligence.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="bg-amber-50 p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300"
+              >
+                <div class="text-3xl mb-2">🧠</div>
+                <div class="font-semibold text-gray-800">AI Innovator</div>
+              </div>
+              <div
+                class="bg-amber-50 p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300"
+              >
+                <div class="text-3xl mb-2">🤖</div>
+                <div class="font-semibold text-gray-800">ML Engineer</div>
+              </div>
+              <div
+                class="bg-amber-50 p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300"
+              >
+                <div class="text-3xl mb-2">📊</div>
+                <div class="font-semibold text-gray-800">Data Analyst</div>
+              </div>
+              <div
+                class="bg-amber-50 p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300"
+              >
+                <div class="text-3xl mb-2">⚡</div>
+                <div class="font-semibold text-gray-800">Tech Enthusiast</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >LangChain</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >LlamaIndex</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >Transformers</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >MySQL</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >PostgreSQL</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >MongoDB</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >AWS</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >Flask</span
+              >
+              <span
+                class="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg"
+                >Django</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden"
+    >
+      <!-- Animated Background -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style="animation-delay: 3s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white anime-text">
+            AI/ML Skills & Expertise
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+          <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
+            Mastering the art of artificial intelligence with cutting-edge
+            machine learning technologies and frameworks
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Core AI & ML Tech -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl text-center hover:scale-105 hover:bg-opacity-20 transition duration-500 fade-in-up border border-white border-opacity-20 group"
+          >
+            <div class="text-7xl mb-6 group-hover:animate-bounce">🤖</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Core AI & ML Tech
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">Python</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">PyTorch</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">TensorFlow</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deep Learning & LLM Ecosystem -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl text-center hover:scale-105 hover:bg-opacity-20 transition duration-500 fade-in-up border border-white border-opacity-20 group"
+            style="animation-delay: 0.2s"
+          >
+            <div class="text-7xl mb-6 group-hover:animate-bounce">🧬</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Deep Learning & LLM
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">Transformers</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">LangChain</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">LlamaIndex</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science & Analytics -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl text-center hover:scale-105 hover:bg-opacity-20 transition duration-500 fade-in-up border border-white border-opacity-20 group"
+            style="animation-delay: 0.4s"
+          >
+            <div class="text-7xl mb-6 group-hover:animate-bounce">📊</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Data Science</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">Pandas</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">NumPy</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">Scikit-learn</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases & DevOps -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl text-center hover:scale-105 hover:bg-opacity-20 transition duration-500 fade-in-up border border-white border-opacity-20 group"
+            style="animation-delay: 0.6s"
+          >
+            <div class="text-7xl mb-6 group-hover:animate-bounce">⚙️</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Databases & DevOps
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">MySQL</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">PostgreSQL</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-300">AWS</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                  <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI/ML Stats -->
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center fade-in-up" style="animation-delay: 0.8s">
+            <div class="text-4xl font-bold text-pink-400 mb-2">7+</div>
+            <div class="text-gray-300">Projects Completed</div>
+          </div>
+          <div class="text-center fade-in-up" style="animation-delay: 1s">
+            <div class="text-4xl font-bold text-purple-400 mb-2">1+</div>
+            <div class="text-gray-300">Years AI Experience</div>
+          </div>
+          <div class="text-center fade-in-up" style="animation-delay: 1.2s">
+            <div class="text-4xl font-bold text-blue-400 mb-2">95%</div>
+            <div class="text-gray-300">Model Accuracy</div>
+          </div>
+          <div class="text-center fade-in-up" style="animation-delay: 1.4s">
+            <div class="text-4xl font-bold text-green-400 mb-2">10K+</div>
+            <div class="text-gray-300">Data Points Processed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <!-- Removed floating icons -->
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 anime-text">
+            Featured AI/ML Projects
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+          <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
+            Showcasing my journey through intelligent systems - from concept to
+            deployment
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Project 1 - Intent Classification Chatbot -->
+          <div
+            class="group bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-white border-opacity-20"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=500&h=300&fit=crop"
+                alt="Intent Classification Chatbot"
+                class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                🤖 Featured
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-white">
+                Intent Classification Chatbot
+              </h3>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                Developed an AI-powered customer service chatbot capable of
+                understanding queries such as order cancellations, refunds, and
+                payment issues. Collected and pre-processed training data for
+                natural language understanding, built an NLP model using TF-IDF
+                and Logistic Regression to classify user intents, and deployed
+                the model using Flask for real-time user interaction.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-10">
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm rounded-full"
+                  >Flask</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm rounded-full"
+                  >TF-IDF</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-sm rounded-full"
+                  >Logistic Regression</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm rounded-full"
+                  >NLP</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-pink-600 hover:to-purple-700 transition duration-300 transform hover:scale-105"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M4 4l12 6-12 6V4z" />
+                    </svg>
+                    Demo
+                  </span>
+                </a>
+
+                <a
+                  href="https://github.com/Ar-jun-fs9/Intent-classification-chatbot-flask"
+                  target="_blank"
+                  class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    GitHub
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - AI LLM Resume Screener -->
+          <div
+            class="group bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-white border-opacity-20"
+            style="animation-delay: 0.2s"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=500&h=300&fit=crop"
+                alt="AI LLM Resume Screener"
+                class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                🏆 AI-Powered
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-white">
+                AI LLM Resume Screener
+              </h3>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                Created an AI-driven resume screening system that evaluates and
+                ranks candidates based on job descriptions. Utilized
+                TinyLlama-1.1B-Chat-v1.0 for advanced language understanding and
+                integrated MiniLM embeddings to measure semantic similarity
+                between resumes and job requirements, automatically identifying
+                and ranking the most relevant candidates for faster, data-driven
+                hiring.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-10">
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm rounded-full"
+                  >TinyLlama</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-sm rounded-full"
+                  >MiniLM</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm rounded-full"
+                  >Embeddings</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm rounded-full"
+                  >Semantic Similarity</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-purple-600 hover:to-indigo-700 transition duration-300 transform hover:scale-105"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M4 4l12 6-12 6V4z" />
+                    </svg>
+                    Demo
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/Ar-jun-fs9/ai-llm-resume-screener"
+                  target="_blank"
+                  class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    GitHub
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 - ISMT College RAG Chatbot -->
+          <div
+            class="group bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-white border-opacity-20"
+            style="animation-delay: 0.4s"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop"
+                alt="ISMT College RAG Chatbot"
+                class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300"
+              ></div>
+              <div
+                class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                📚 RAG System
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-white">
+                ISMT College RAG Chatbot
+              </h3>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                Built an AI information assistant for ISMT College using
+                Retrieval-Augmented Generation (RAG). Combined LLaMA 3.1 and
+                Groq Cloud to generate accurate, source-verified answers from
+                institutional documents. Designed a conversational interface for
+                students and staff to easily retrieve information, including
+                clickable references to improve transparency and trust in
+                responses.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-10">
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white text-sm rounded-full"
+                  >LLaMA 3.1</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm rounded-full"
+                  >Groq Cloud</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm rounded-full"
+                  >RAG</span
+                >
+                <span
+                  class="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm rounded-full"
+                  >Vector DB</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="flex-1 bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-green-600 hover:to-teal-700 transition duration-300 transform hover:scale-105"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M4 4l12 6-12 6V4z" />
+                    </svg>
+                    Demo
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/Ar-jun-fs9/ismt-college-rag-chatbot"
+                  target="_blank"
+                  class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    GitHub
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-16">
+          <a
+            href="#contact"
+            class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-lg glow"
+          >
+            Ready to Build AI Solutions? Let's Connect! 🤖
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section
+      id="tech-stack"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 left-10 text-8xl">⚡</div>
+        <div class="absolute top-20 right-20 text-6xl">🤖</div>
+        <div class="absolute bottom-20 left-1/4 text-7xl">🚀</div>
+        <div class="absolute bottom-10 right-10 text-5xl">💫</div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div
+          class="text-center mb-16 flex items-center justify-center flex-col"
+        >
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 anime-text">
+            💻 Tech Stack
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+          <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+            A comprehensive toolkit of cutting-edge technologies and frameworks
+            I use to build intelligent systems and scalable applications.
+          </p>
+        </div>
+
+        <!-- Core AI & ML -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-center mb-8 text-white">
+            🤖 Core AI & ML Tech
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img
+              src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white"
+              alt="Python"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white"
+              alt="PyTorch"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white"
+              alt="TensorFlow"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=white"
+              alt="Keras"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white"
+              alt="scikit-learn"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/XGBoost-FF6600?logo=xgboost&logoColor=white"
+              alt="XGBoost"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/LightGBM-005500?logo=lightgbm&logoColor=white"
+              alt="LightGBM"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/CatBoost-FFCC00?logoColor=black"
+              alt="CatBoost"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white"
+              alt="NumPy"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white"
+              alt="Pandas"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Matplotlib-11557C?logo=matplotlib&logoColor=white"
+              alt="Matplotlib"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Seaborn-3776AB?logoColor=white"
+              alt="Seaborn"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Plotly-3F4F75?logo=plotly&logoColor=white"
+              alt="Plotly"
+              class="hover:scale-110 transition duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Deep Learning & LLM Ecosystem -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-center mb-8 text-white">
+            🧬 Deep Learning & LLM Ecosystem
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img
+              src="https://img.shields.io/badge/Transformers-%F0%9F%A4%96-yellow"
+              alt="Transformers"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/LangChain-%2300CCBB.svg?logoColor=white"
+              alt="LangChain"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/LlamaIndex-%234285F4.svg?logoColor=white"
+              alt="LlamaIndex"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"
+              alt="OpenAI"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black"
+              alt="HuggingFace"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/spaCy-09A3D5?logo=spacy&logoColor=white"
+              alt="spaCy"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/NLTK-154734?logoColor=white"
+              alt="NLTK"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Pinecone-20232A?logoColor=white"
+              alt="Pinecone"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/FAISS-20232A?logoColor=white"
+              alt="FAISS"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Weaviate-2B7CF7?logoColor=white"
+              alt="Weaviate"
+              class="hover:scale-110 transition duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Familiar / Secondary Tech -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-center mb-8 text-white">
+            ⚙️ Familiar Tech
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img
+              src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white"
+              alt="Flask"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white"
+              alt="Django"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white"
+              alt="HTML5"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white"
+              alt="CSS3"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"
+              alt="JavaScript"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB"
+              alt="React"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white"
+              alt="Next.js"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white"
+              alt="Tailwind CSS"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white"
+              alt="Bootstrap"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white"
+              alt="Node.js"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white"
+              alt="Express.js"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white"
+              alt="MySQL"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"
+              alt="PostgreSQL"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white"
+              alt="MongoDB"
+              class="hover:scale-110 transition duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Tech Stack Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div
+            class="text-center bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-white border-opacity-20"
+          >
+            <div class="text-4xl font-bold text-pink-400 mb-2">15+</div>
+            <div class="text-gray-300">Used Technologies</div>
+          </div>
+          <div
+            class="text-center bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-white border-opacity-20"
+          >
+            <div class="text-4xl font-bold text-purple-400 mb-2">8+</div>
+            <div class="text-gray-300">AI/ML Frameworks</div>
+          </div>
+          <div
+            class="text-center bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-white border-opacity-20"
+          >
+            <div class="text-4xl font-bold text-blue-400 mb-2">5+</div>
+            <div class="text-gray-300">Vector Databases</div>
+          </div>
+          <div
+            class="text-center bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-white border-opacity-20"
+          >
+            <div class="text-4xl font-bold text-green-400 mb-2">24/7</div>
+            <div class="text-gray-300">Learning Mode</div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+          <div
+            class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
+          >
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Ready to Build Something Amazing?
+            </h3>
+            <p class="text-pink-100 mb-6 max-w-2xl mx-auto">
+              Let's leverage these technologies to create intelligent solutions
+              that make a real impact. From AI-powered applications to scalable
+              web systems, I'm ready to bring your vision to life.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-white text-pink-600 font-semibold rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+              >
+                🚀 Start a Project
+              </a>
+              <a
+                href="#projects"
+                class="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition duration-300"
+              >
+                📁 View My Work
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog/Learning Section -->
+    <section
+      id="blog"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden"
+    >
+      <!-- Animated Background -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <!-- Floating AI Elements -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          class="parallax absolute top-20 left-10 text-4xl float"
+          style="animation-delay: 0s"
+        >
+          🧠
+        </div>
+        <div
+          class="parallax absolute top-40 right-20 text-3xl float"
+          style="animation-delay: 1s"
+        >
+          ⚡
+        </div>
+        <div
+          class="parallax absolute bottom-40 left-1/4 text-5xl float"
+          style="animation-delay: 2s"
+        >
+          🤖
+        </div>
+        <div
+          class="parallax absolute top-1/2 right-10 text-4xl float"
+          style="animation-delay: 3s"
+        >
+          📊
+        </div>
+        <div
+          class="parallax absolute bottom-20 right-1/4 text-6xl float"
+          style="animation-delay: 4s"
+        >
+          🚀
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white anime-text">
+            AI/ML Insights & Learning
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+          <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+            Exploring the frontiers of artificial intelligence through practical
+            implementations, research insights, and continuous learning. Sharing
+            knowledge to advance the AI community.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <!-- Mini Article 1 -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-500 fade-in-up group"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🧠</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  Understanding Transformer Architecture
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Nov 2025</span>
+                  <span class="mr-4">⏱️ 8 min read</span>
+                  <span>🏷️ Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Transformers revolutionized natural language processing by
+              introducing self-attention mechanisms. Unlike traditional RNNs,
+              transformers process entire sequences in parallel, enabling faster
+              training and better handling of long-range dependencies. The key
+              innovation lies in the multi-head attention mechanism that allows
+              the model to focus on different parts of the input simultaneously.
+            </p>
+
+            <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-indigo-300 mb-2">
+                Key Components:
+              </h4>
+              <ul class="text-gray-300 space-y-1">
+                <li>
+                  • <strong>Self-Attention:</strong> Computes relevance between
+                  different positions
+                </li>
+                <li>
+                  • <strong>Multi-Head Attention:</strong> Parallel attention
+                  computations
+                </li>
+                <li>
+                  • <strong>Positional Encoding:</strong> Adds sequence order
+                  information
+                </li>
+                <li>
+                  • <strong>Feed-Forward Networks:</strong> Position-wise
+                  transformations
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-3 py-1 bg-indigo-500 bg-opacity-30 text-indigo-300 rounded-full text-sm"
+                  >#Transformers</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
+                  >#NLP</span
+                >
+              </div>
+              <button
+                class="text-indigo-400 hover:text-indigo-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini Article 2 -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">⚡</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  RAG: Revolutionizing AI Applications
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Oct 2025</span>
+                  <span class="mr-4">⏱️ 6 min read</span>
+                  <span>🏷️ AI Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Retrieval-Augmented Generation (RAG) combines the strengths of
+              retrieval-based and generative models. By retrieving relevant
+              information from external knowledge sources before generating
+              responses, RAG systems provide more accurate, up-to-date, and
+              contextually relevant answers while reducing hallucinations common
+              in standalone generative models.
+            </p>
+
+            <div class="bg-purple-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-purple-300 mb-2">
+                RAG Pipeline:
+              </h4>
+              <div class="text-gray-300 space-y-2">
+                <div class="flex items-center">
+                  <span
+                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
+                    >1</span
+                  >
+                  <span>User Query → Embedding</span>
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
+                    >2</span
+                  >
+                  <span>Vector Search in Knowledge Base</span>
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
+                    >3</span
+                  >
+                  <span>Retrieve Relevant Documents</span>
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
+                    >4</span
+                  >
+                  <span>Generate Context-Aware Response</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
+                  >#RAG</span
+                >
+                <span
+                  class="px-3 py-1 bg-pink-500 bg-opacity-30 text-pink-300 rounded-full text-sm"
+                  >#LLMs</span
+                >
+              </div>
+              <button
+                class="text-purple-400 hover:text-purple-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini Article 3 -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">📊</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  Vector Databases: The AI Memory Layer
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Sep 2025</span>
+                  <span class="mr-4">⏱️ 10 min read</span>
+                  <span>🏷️ Infrastructure</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Vector databases are specialized databases designed to store and
+              query high-dimensional vectors, which are mathematical
+              representations of data. They enable semantic search,
+              recommendation systems, and similarity matching at scale.
+              Understanding vector databases is crucial for building modern AI
+              applications that require efficient similarity search.
+            </p>
+
+            <div class="bg-green-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-green-300 mb-2">
+                Popular Vector Databases:
+              </h4>
+              <div class="grid grid-cols-2 gap-3 text-gray-300">
+                <div class="flex items-center">
+                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                  <span>Pinecone</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                  <span>Weaviate</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                  <span>Qdrant</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                  <span>Milvus</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm"
+                  >#VectorDB</span
+                >
+                <span
+                  class="px-3 py-1 bg-teal-500 bg-opacity-30 text-teal-300 rounded-full text-sm"
+                  >#Embeddings</span
+                >
+              </div>
+              <button
+                class="text-green-400 hover:text-green-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini Article 4 -->
+          <div
+            class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.6s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🚀</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  MLOps: Production-Ready AI Systems
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Aug 2025</span>
+                  <span class="mr-4">⏱️ 12 min read</span>
+                  <span>🏷️ Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              MLOps bridges the gap between machine learning development and
+              production deployment. It encompasses the entire lifecycle of ML
+              systems, from data collection and model training to deployment,
+              monitoring, and continuous improvement. Implementing MLOps
+              practices ensures reliable, scalable, and maintainable AI
+              solutions.
+            </p>
+
+            <div class="bg-orange-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-orange-300 mb-2">
+                MLOps Workflow:
+              </h4>
+              <div class="space-y-3 text-gray-300">
+                <div class="flex items-start">
+                  <span
+                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
+                    >1</span
+                  >
+                  <div>
+                    <strong>Data Pipeline:</strong> Automated data ingestion,
+                    validation, and preprocessing
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span
+                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
+                    >2</span
+                  >
+                  <div>
+                    <strong>Model Training:</strong> Versioned experiments with
+                    reproducible results
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span
+                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
+                    >3</span
+                  >
+                  <div>
+                    <strong>CI/CD Pipeline:</strong> Automated testing,
+                    deployment, and rollback
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span
+                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
+                    >4</span
+                  >
+                  <div>
+                    <strong>Monitoring:</strong> Performance tracking, drift
+                    detection, and alerting
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-3 py-1 bg-orange-500 bg-opacity-30 text-orange-300 rounded-full text-sm"
+                  >#MLOps</span
+                >
+                <span
+                  class="px-3 py-1 bg-red-500 bg-opacity-30 text-red-300 rounded-full text-sm"
+                  >#DevOps</span
+                >
+              </div>
+              <button
+                class="text-orange-400 hover:text-orange-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Journey -->
+        <div
+          class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20"
+        >
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold text-white mb-4">
+              Continuous Learning Journey
+            </h3>
+            <p class="text-gray-300 max-w-2xl mx-auto">
+              My commitment to staying at the forefront of AI/ML innovation
+              through hands-on projects, research, and community contribution.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl">📚</span>
+              </div>
+              <h4 class="text-xl font-semibold text-white mb-2">
+                Research & Papers
+              </h4>
+              <p class="text-gray-400">
+                Following latest AI research papers and implementing novel
+                architectures
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl">💻</span>
+              </div>
+              <h4 class="text-xl font-semibold text-white mb-2">Open Source</h4>
+              <p class="text-gray-400">
+                Contributing to AI/ML projects and building tools for the
+                community
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl">🎓</span>
+              </div>
+              <h4 class="text-xl font-semibold text-white mb-2">
+                Knowledge Sharing
+              </h4>
+              <p class="text-gray-400">
+                Writing tutorials, creating educational content, and mentoring
+                others
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-16">
+          <div
+            class="bg-white bg-opacity-5 rounded-2xl p-8 border border-white border-opacity-20"
+          >
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Want to Learn More About AI/ML?
+            </h3>
+            <p class="text-indigo-100 mb-6 max-w-2xl mx-auto">
+              I'm passionate about sharing knowledge and helping others
+              understand the fascinating world of artificial intelligence. Let's
+              connect and explore the possibilities together!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-white text-indigo-600 font-semibold rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+              >
+                Start a Discussion
+              </a>
+              <a
+                href="https://github.com/Ar-jun-fs9"
+                target="_blank"
+                class="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-600 transition duration-300"
+              >
+                View My Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden"
+    >
+      <!-- Animated Background -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style="animation-delay: 3s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white anime-text">
+            Let's Connect
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"
+          ></div>
+          <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
+            Ready to bring your ideas to life? Let's create something amazing
+            together! 🚀
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div class="space-y-8 fade-in-up">
+            <div>
+              <h3 class="text-3xl font-bold text-white mb-6">Get In Touch</h3>
+              <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                I'm always excited to work on new projects and collaborate with
+                fellow developers. Whether you have a project in mind, need
+                consultation, or just want to chat about tech, feel free to
+                reach out!
+              </p>
+            </div>
+
+            <!-- Contact Methods -->
+            <div class="space-y-6">
+              <div
+                class="flex items-center space-x-4 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Email</div>
+                  <a
+                    href="mailto:arjunbhul5799@gmail.com"
+                    class="text-gray-300 hover:text-pink-400 transition duration-300"
+                    >arjunbhul5799@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">LinkedIn</div>
+                  <a
+                    href="https://linkedin.com/in/arjun-dev"
+                    target="_blank"
+                    class="text-gray-300 hover:text-blue-400 transition duration-300"
+                    >linkedin.com/in/Ar-jun-fs9</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">GitHub</div>
+                  <a
+                    href="https://github.com/Ar-jun-fs9"
+                    target="_blank"
+                    class="text-gray-300 hover:text-gray-400 transition duration-300"
+                    >github.com/Ar-jun-fs9</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Discord</div>
+                  <div class="text-gray-300">arjun_b#5799</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Availability Status -->
+            <div
+              class="bg-gradient-to-r from-green-500 to-teal-500 p-4 rounded-2xl text-center"
+            >
+              <div
+                class="flex items-center justify-center space-x-2 text-white"
+              >
+                <div class="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                <span class="font-semibold">Available for new projects</span>
+              </div>
+              <p class="text-green-100 mt-2">
+                Typically responds within 24 hours
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="fade-in-up" style="animation-delay: 0.3s">
+            <div
+              class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl border border-white border-opacity-20"
+            >
+              <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-gray-300 font-medium mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 bg-white bg-opacity-5 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-opacity-15 transition duration-300"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-gray-300 font-medium mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 bg-white bg-opacity-5 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-opacity-15 transition duration-300"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-gray-300 font-medium mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="w-full px-4 py-3 bg-white bg-opacity-5 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-opacity-15 transition duration-300"
+                    placeholder="Project Discussion"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-300 font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 bg-white bg-opacity-5 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-opacity-15 transition duration-300 resize-none"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition duration-300 transform hover:scale-105 shadow-lg glow"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      ></path>
+                    </svg>
+                    Send Message
+                  </span>
+                </button>
+              </form>
+              <div id="formMessage" class="mt-4 text-center hidden">
+                <p class="text-green-400 font-medium">
+                  Message sent successfully! 🎉
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-12 relative overflow-hidden"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <!-- Removed floating icons -->
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <div class="text-2xl font-bold anime-text mb-4">Arjun.B</div>
+            <p class="text-gray-400 leading-relaxed mb-4">
+              Crafting digital experiences with passion and precision.
+              Specializing in modern web technologies and anime-inspired designs
+              that bring ideas to life.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/Ar-jun-fs9"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-400 transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/arjun-bhul-37656b398"
+                target="_blank"
+                class="text-gray-400 hover:text-blue-400 transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:arjun@example.com"
+                class="text-gray-400 hover:text-pink-400 transition duration-300"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#hero"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tech-stack"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Tech Stack</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-pink-400 transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Services</h4>
+            <ul class="space-y-2">
+              <li class="text-gray-400">AI & Machine Learning Solutions</li>
+              <li class="text-gray-400">Data Analysis & Visualization</li>
+              <li class="text-gray-400">Full-Stack Web Development</li>
+              <li class="text-gray-400">Model Deployment & Optimization</li>
+              <li class="text-gray-400">Technical Consultation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Arjun. All rights reserved. Made with ❤️ and lots of
+              ☕
+            </div>
+            <div class="flex items-center space-x-4 text-sm text-gray-400">
+              <span>Built with</span>
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-pink-500 bg-opacity-20 text-pink-400 rounded"
+                  >HTML</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded"
+                  >javaScript</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Quote -->
+        <div class="text-center mt-8">
+          <p class="text-gray-500 italic">
+            "AI is not the future, it's the present — and I'm building it." ✨
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>

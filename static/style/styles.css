@@ -1,0 +1,124 @@
+
+      /* Custom color palette - Anime-inspired */
+      :root {
+        --primary: #ff6b9d;
+        --secondary: #4ecdc4;
+        --accent: #45b7d1;
+        --dark: #2d3748;
+        --light: #f7fafc;
+        --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Custom animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary),
+            0 0 8px var(--primary);
+        }
+        50% {
+          box-shadow: 0 0 4px var(--primary), 0 0 8px var(--primary),
+            0 0 12px var(--primary);
+        }
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      .glow {
+        animation: glow 2s infinite;
+      }
+      .typing {
+        overflow: hidden;
+        border-right: 2px solid var(--primary);
+        white-space: nowrap;
+        animation: typing 3s steps(40, end), blink 1s infinite;
+      }
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+      .slide-in-left {
+        animation: slideInLeft 1s ease-out forwards;
+      }
+      .slide-in-right {
+        animation: slideInRight 1s ease-out forwards;
+      }
+      .anime-text {
+        font-family: "JetBrains Mono", monospace;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .glass-morphism {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+ 
