@@ -113,11 +113,53 @@ document.querySelectorAll('#projects .group').forEach(card => {
     });
 });
 
-// Mobile menu toggle
+// Mobile menu toggle with improved functionality
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu) mobileMenu.classList.toggle('hidden');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+    if (mobileMenu && mobileMenuBtn) {
+        const isHidden = mobileMenu.classList.contains('hidden');
+
+        if (isHidden) {
+            // Show menu
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBtn.innerHTML = `
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            `;
+        } else {
+            // Hide menu
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = `
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            `;
+        }
+    }
 }
+
+// Close mobile menu when clicking on a link
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+            if (mobileMenu && mobileMenuBtn) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                `;
+            }
+        });
+    });
+});
 
 // Initialize everything on page load
 document.addEventListener('DOMContentLoaded', () => {
