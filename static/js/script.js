@@ -194,22 +194,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-// AI/ML themed particle effect (simplified)
-function createParticles() {
-    const heroSection = document.getElementById('hero');
-    if (!heroSection) return;
-
-    for (let i = 0; i < 15; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 3 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        heroSection.appendChild(particle);
-    }
-}
-
-// Initialize particles on load
-document.addEventListener('DOMContentLoaded', createParticles);
