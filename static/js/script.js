@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Typing effect
     const heroTitle = document.querySelector('#hero h1');
-    if (heroTitle) typeWriter(heroTitle, 'Arjun', 150);
+    if (heroTitle) typeWriter(heroTitle, 'Arjun Bhul', 150);
 
     // Mobile menu
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
