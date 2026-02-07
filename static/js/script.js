@@ -88,16 +88,20 @@ function throttle(func, limit) {
 window.addEventListener('scroll', throttle(updateSidebarColors, 16));
 
 // Enhanced hover effects for skill cards
-document.querySelectorAll('#skills .bg-white').forEach(card => {
+document.querySelectorAll('#skills .bg-transparent').forEach(card => {
+    // Set initial thin border
+    card.style.border = '1px solid #ffffff'; // thin white border
+
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'scale(1.05) rotate(1deg)';
-        card.style.boxShadow = '0 20px 40px rgba(255, 105, 157, 0.3)';
-        card.style.border = '2px solid #5ad8f7';
+        card.style.border = '2px solid #ffffff'; // thicker border on hover
+        // card.style.boxShadow = '0 20px 40px rgba(255, 105, 157, 0.3)';
     });
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'scale(1) rotate(0deg)';
+        card.style.border = '1px solid #ffffff'; // back to thin border
         card.style.boxShadow = 'none';
-        card.style.border = 'none';
     });
 });
 
