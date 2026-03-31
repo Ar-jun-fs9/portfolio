@@ -1446,21 +1446,21 @@
               alt="Express.js"
               class="hover:scale-110 transition duration-300"
             />
-            <img
+            <!-- <img
               src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white"
               alt="MySQL"
               class="hover:scale-110 transition duration-300"
-            />
+            /> -->
             <img
               src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"
               alt="PostgreSQL"
               class="hover:scale-110 transition duration-300"
             />
-            <img
+            <!-- <img
               src="https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white"
               alt="MongoDB"
               class="hover:scale-110 transition duration-300"
-            />
+            /> -->
           </div>
         </div>
 
@@ -1608,8 +1608,9 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <!-- Mini Article 1 -->
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+          <!-- Article 1 -->
           <div
             class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
           >
@@ -1617,65 +1618,59 @@
               <div
                 class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-4"
               >
-                <span class="text-2xl">🧠</span>
+                <span class="text-2xl">🤖</span>
               </div>
               <div>
                 <h3 class="text-2xl font-bold text-white mb-1">
-                  Understanding Transformer Architecture
+                  Agentic RAG Is Replacing the Old Retrieval Pipeline
                 </h3>
                 <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 Feb 2026</span>
+                  <span class="mr-4">📅 Mar 20, 2026</span>
                   <span class="mr-4">⏱️ 8 min read</span>
-                  <span>🏷️ Deep Learning</span>
+                  <span>🏷️ RAG / LLMs</span>
                 </div>
               </div>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-6">
-              Transformers revolutionized natural language processing by
-              introducing self-attention mechanisms. Unlike traditional RNNs,
-              transformers process entire sequences in parallel, enabling faster
-              training and better handling of long-range dependencies. The key
-              innovation lies in the multi-head attention mechanism that allows
-              the model to focus on different parts of the input simultaneously.
+              Single-pass RAG is dead. In 2026, agentic RAG systems let the LLM
+              grade retrieved documents for relevance, rewrite queries, and
+              verify hallucinations in a self-correcting loop. Production
+              deployments report 25–40% reduction in unnecessary retrievals
+              compared to traditional straight pipelines.
             </p>
 
             <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-6">
               <h4 class="text-lg font-semibold text-indigo-300 mb-2">
-                Key Components:
+                Agentic RAG Loop:
               </h4>
-              <ul class="text-gray-300 space-y-1">
-                <li>
-                  • <strong>Self-Attention:</strong> Computes relevance between
-                  different positions
-                </li>
-                <li>
-                  • <strong>Multi-Head Attention:</strong> Parallel attention
-                  computations
-                </li>
-                <li>
-                  • <strong>Positional Encoding:</strong> Adds sequence order
-                  information
-                </li>
-                <li>
-                  • <strong>Feed-Forward Networks:</strong> Position-wise
-                  transformations
-                </li>
-              </ul>
+              <div class="text-gray-300 space-y-2">
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">1</span>
+                  <span>Query → Embedding → Vector Search</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">2</span>
+                  <span>LLM Grades Document Relevance</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">3</span>
+                  <span>Query Rewrite if Needed</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">4</span>
+                  <span>Hallucination Verified Response</span>
+                </div>
+              </div>
             </div>
 
             <div class="flex items-center justify-between">
               <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-indigo-500 bg-opacity-30 text-indigo-300 rounded-full text-sm"
-                  >#Transformers</span
-                >
-                <span
-                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
-                  >#NLP</span
-                >
+                <span class="px-3 py-1 bg-indigo-500 bg-opacity-30 text-indigo-300 rounded-full text-sm">#AgenticRAG</span>
+                <span class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm">#LLMs</span>
               </div>
               <button
+                onclick="window.open('https://dev.to/ji_ai/single-pass-rag-is-dead-the-complete-2026-ai-keyword-roundup-1din', '_blank')"
                 class="text-indigo-400 hover:text-indigo-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
               >
                 Read More →
@@ -1683,86 +1678,111 @@
             </div>
           </div>
 
-          <!-- Mini Article 2 -->
+          <!-- Article 2 -->
           <div
             class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
             style="animation-delay: 0.2s"
           >
             <div class="flex items-center mb-6">
               <div
-                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4"
+                class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4"
               >
-                <span class="text-2xl">⚡</span>
+                <span class="text-2xl">🛰️</span>
               </div>
               <div>
                 <h3 class="text-2xl font-bold text-white mb-1">
-                  RAG: Revolutionizing AI Applications
+                  AI Performs Real-Time Object Detection From Orbit
                 </h3>
                 <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 Feb 2026</span>
-                  <span class="mr-4">⏱️ 6 min read</span>
-                  <span>🏷️ AI Engineering</span>
+                  <span class="mr-4">📅 Mar 26, 2026</span>
+                  <span class="mr-4">⏱️ 5 min read</span>
+                  <span>🏷️ Computer Vision</span>
                 </div>
               </div>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-6">
-              Retrieval-Augmented Generation (RAG) combines the strengths of
-              retrieval-based and generative models. By retrieving relevant
-              information from external knowledge sources before generating
-              responses, RAG systems provide more accurate, up-to-date, and
-              contextually relevant answers while reducing hallucinations common
-              in standalone generative models.
+              Syntiant and Novi Space demonstrated low-power AI inference on a
+              live satellite, successfully detecting vehicles and ships from low
+              Earth orbit using quantized neural network models — all running on
+              compact onboard hardware with no GPU required.
             </p>
 
-            <div class="bg-purple-900 bg-opacity-20 rounded-lg p-4 mb-6">
-              <h4 class="text-lg font-semibold text-purple-300 mb-2">
-                RAG Pipeline:
+            <div class="bg-blue-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-blue-300 mb-2">
+                Key Highlights:
               </h4>
-              <div class="text-gray-300 space-y-2">
-                <div class="flex items-center">
-                  <span
-                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
-                    >1</span
-                  >
-                  <span>User Query → Embedding</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
-                    >2</span
-                  >
-                  <span>Vector Search in Knowledge Base</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
-                    >3</span
-                  >
-                  <span>Retrieve Relevant Documents</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                    class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs mr-3"
-                    >4</span
-                  >
-                  <span>Generate Context-Aware Response</span>
-                </div>
-              </div>
+              <ul class="text-gray-300 space-y-1">
+                <li>• <strong>Edge AI:</strong> Full inference onboard, no ground relay</li>
+                <li>• <strong>Quantized Models:</strong> Minimal power footprint</li>
+                <li>• <strong>Live Detection:</strong> Vehicles &amp; ships from LEO</li>
+                <li>• <strong>No GPU:</strong> Runs on compact neural processors</li>
+              </ul>
             </div>
 
             <div class="flex items-center justify-between">
               <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
-                  >#RAG</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-500 bg-opacity-30 text-blue-300 rounded-full text-sm"
-                  >#LLMs</span
-                >
+                <span class="px-3 py-1 bg-blue-500 bg-opacity-30 text-blue-300 rounded-full text-sm">#ObjectDetection</span>
+                <span class="px-3 py-1 bg-cyan-500 bg-opacity-30 text-cyan-300 rounded-full text-sm">#EdgeAI</span>
               </div>
               <button
+                onclick="window.open('https://www.syntiant.com/news/syntiant-and-novi-space-successfully-demonstrate-low-power-ai-inference-in-orbit', '_blank')"
+                class="text-blue-400 hover:text-blue-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🧠</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  AI & Bots Have Overtaken Human Internet Traffic
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 27, 2026</span>
+                  <span class="mr-4">⏱️ 6 min read</span>
+                  <span>🏷️ AI Research</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              A Human Security report found that AI-generated and bot traffic
+              now eclipses human users online. Automated internet activity grew
+              nearly eight times faster than human activity in 2025, driven
+              largely by large language models like ChatGPT, Claude, and Gemini.
+            </p>
+
+            <div class="bg-purple-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-purple-300 mb-2">
+                Traffic Breakdown:
+              </h4>
+              <ul class="text-gray-300 space-y-1">
+                <li>• <strong>Bot Traffic:</strong> Now majority of all web requests</li>
+                <li>• <strong>Growth Rate:</strong> 8× faster than human traffic</li>
+                <li>• <strong>Key Drivers:</strong> ChatGPT, Claude, Gemini crawlers</li>
+                <li>• <strong>Impact:</strong> Reshaping CDN &amp; analytics baselines</li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm">#LLMs</span>
+                <span class="px-3 py-1 bg-pink-500 bg-opacity-30 text-pink-300 rounded-full text-sm">#AIImpact</span>
+              </div>
+              <button
+                onclick="window.open('https://www.cnbc.com/2026/03/26/ai-bots-humans-internet.html', '_blank')"
                 class="text-purple-400 hover:text-purple-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
               >
                 Read More →
@@ -1770,338 +1790,68 @@
             </div>
           </div>
 
-          <!-- Mini Article 3 -->
-          <div
-            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
-            style="animation-delay: 0.4s"
-          >
-            <div class="flex items-center mb-6">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4"
-              >
-                <span class="text-2xl">📊</span>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-white mb-1">
-                  Vector Databases: The AI Memory Layer
-                </h3>
-                <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 Feb 2026</span>
-                  <span class="mr-4">⏱️ 10 min read</span>
-                  <span>🏷️ Infrastructure</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-gray-300 leading-relaxed mb-6">
-              Vector databases are specialized databases designed to store and
-              query high-dimensional vectors, which are mathematical
-              representations of data. They enable semantic search,
-              recommendation systems, and similarity matching at scale.
-              Understanding vector databases is crucial for building modern AI
-              applications that require efficient similarity search.
-            </p>
-
-            <div class="bg-green-900 bg-opacity-20 rounded-lg p-4 mb-6">
-              <h4 class="text-lg font-semibold text-green-300 mb-2">
-                Popular Vector Databases:
-              </h4>
-              <div class="grid grid-cols-2 gap-3 text-gray-300">
-                <div class="flex items-center">
-                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
-                  <span>Pinecone</span>
-                </div>
-                <div class="flex items-center">
-                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
-                  <span>Weaviate</span>
-                </div>
-                <div class="flex items-center">
-                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
-                  <span>Qdrant</span>
-                </div>
-                <div class="flex items-center">
-                  <span class="w-3 h-3 bg-green-400 rounded-full mr-2"></span>
-                  <span>Milvus</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm"
-                  >#VectorDB</span
-                >
-                <span
-                  class="px-3 py-1 bg-teal-500 bg-opacity-30 text-teal-300 rounded-full text-sm"
-                  >#Embeddings</span
-                >
-              </div>
-              <button
-                class="text-green-400 hover:text-green-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
-              >
-                Read More →
-              </button>
-            </div>
-          </div>
-
-          <!-- Mini Article 4 -->
+          <!-- Article 4 -->
           <div
             class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
             style="animation-delay: 0.6s"
           >
             <div class="flex items-center mb-6">
               <div
-                class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-4"
-              >
-                <span class="text-2xl">🚀</span>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-white mb-1">
-                  MLOps: Production-Ready AI Systems
-                </h3>
-                <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 Feb 2026</span>
-                  <span class="mr-4">⏱️ 12 min read</span>
-                  <span>🏷️ Engineering</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-gray-300 leading-relaxed mb-6">
-              MLOps bridges the gap between machine learning development and
-              production deployment. It encompasses the entire lifecycle of ML
-              systems, from data collection and model training to deployment,
-              monitoring, and continuous improvement. Implementing MLOps
-              practices ensures reliable, scalable, and maintainable AI
-              solutions.
-            </p>
-
-            <div class="bg-orange-900 bg-opacity-20 rounded-lg p-4 mb-6">
-              <h4 class="text-lg font-semibold text-orange-300 mb-2">
-                MLOps Workflow:
-              </h4>
-              <div class="space-y-3 text-gray-300">
-                <div class="flex items-start">
-                  <span
-                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
-                    >1</span
-                  >
-                  <div>
-                    <strong>Data Pipeline:</strong> Automated data ingestion,
-                    validation, and preprocessing
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <span
-                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
-                    >2</span
-                  >
-                  <div>
-                    <strong>Model Training:</strong> Versioned experiments with
-                    reproducible results
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <span
-                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
-                    >3</span
-                  >
-                  <div>
-                    <strong>CI/CD Pipeline:</strong> Automated testing,
-                    deployment, and rollback
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <span
-                    class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0"
-                    >4</span
-                  >
-                  <div>
-                    <strong>Monitoring:</strong> Performance tracking, drift
-                    detection, and alerting
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-orange-500 bg-opacity-30 text-orange-300 rounded-full text-sm"
-                  >#MLOps</span
-                >
-                <span
-                  class="px-3 py-1 bg-red-500 bg-opacity-30 text-red-300 rounded-full text-sm"
-                  >#DevOps</span
-                >
-              </div>
-              <button
-                class="text-orange-400 hover:text-orange-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
-              >
-                Read More →
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <!-- Mini Article 1 -->
-          <div
-            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
-          >
-            <div class="flex items-center mb-6">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-4"
-              >
-                <span class="text-2xl">📊</span>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-white mb-1">
-                  India AI Impact Summit 2026 Kicks Off
-                </h3>
-                <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 March 2026</span>
-                  <span class="mr-4">⏱️ 5 min read</span>
-                  <span>🏷️ AI Events</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-gray-300 leading-relaxed mb-6">
-              The India AI Impact Summit 2026 began on 16 Feb in New Delhi,
-              expected to draw 200 000+ visitors. Industry leaders and
-              innovators are discussing AI’s role in digital transformation,
-              investment, and implementation strategies across sectors.
-            </p>
-
-            <div class="flex items-center justify-between">
-              <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-indigo-500 bg-opacity-30 text-indigo-300 rounded-full text-sm"
-                  >#AIImpactSummit</span
-                >
-                <span
-                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
-                  >#TechEvents</span
-                >
-              </div>
-              <button
-                onclick="
-                  window.open(
-                    'https://timesofindia.indiatimes.com/technology/tech-news/india-ai-impact-summit-2026-how-to-register-online-key-attendees-why-to-attend-and-other-key-information/articleshow/128414016.cms',
-                    '_blank',
-                  )
-                "
-                class="text-indigo-400 hover:text-indigo-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
-              >
-                Read More →
-              </button>
-            </div>
-          </div>
-
-          <!-- Mini Article 2 -->
-          <div
-            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
-            style="animation-delay: 0.2s"
-          >
-            <div class="flex items-center mb-6">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4"
-              >
-                <span class="text-2xl">🧠</span>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-white mb-1">
-                  Microsoft AI CEO Predicts Job Automation Surge
-                </h3>
-                <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 March 2026</span>
-                  <span class="mr-4">⏱️ 4 min read</span>
-                  <span>🏷️ AI Economy</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-gray-300 leading-relaxed mb-6">
-              Microsoft AI CEO Mustafa Suleyman forecasts rapid automation of
-              white‑collar jobs within 12‑18 months due to advancements in AI
-              agents capable of handling complex professional tasks — reshaping
-              workplace workflows.
-            </p>
-
-            <div class="flex items-center justify-between">
-              <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-purple-500 bg-opacity-30 text-purple-300 rounded-full text-sm"
-                  >#Automation</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-500 bg-opacity-30 text-blue-300 rounded-full text-sm"
-                  >#AIJobs</span
-                >
-              </div>
-              <button
-                onclick="
-                  window.open(
-                    'https://timesofindia.indiatimes.com/technology/tech-news/microsoft-ai-ceo-mustafa-suleyman-predicts-white-collar-job-automation-within-18-months-says-ai-agents-will-be-able-to-/articleshow/128291088.cms',
-                    '_blank',
-                  )
-                "
-                class="text-purple-400 hover:text-purple-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
-              >
-                Read More →
-              </button>
-            </div>
-          </div>
-
-          <!-- Mini Article 3 -->
-          <div
-            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
-            style="animation-delay: 0.4s"
-          >
-            <div class="flex items-center mb-6">
-              <div
                 class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4"
               >
-                <span class="text-2xl">🗞️</span>
+                <span class="text-2xl">📄</span>
               </div>
               <div>
                 <h3 class="text-2xl font-bold text-white mb-1">
-                  Top AI Tech Releases This Week
+                  LLMs Now Screen Millions of Resumes in Under 5 Minutes
                 </h3>
                 <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 March 2026</span>
-                  <span class="mr-4">⏱️ 7 min read</span>
-                  <span>🏷️ AI Tools</span>
+                  <span class="mr-4">📅 Mar 28, 2026</span>
+                  <span class="mr-4">⏱️ 7 min read</span>
+                  <span>🏷️ AI Resume Screening</span>
                 </div>
               </div>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-6">
-              Key AI updates from 3‑10 March 2026 included Meta’s Llama 3.2
-              release, multimodal AI detection tools, new development platforms
-              with automated testing, and Anthropic’s Claude Opus 4.6
-              enhancements.
+              The "300-second filter" has arrived — LLM-powered hiring stacks
+              now reject applicants semantically, not just by keyword. Only 29%
+              of companies maintain human oversight over AI rejection decisions,
+              while AI interview automation is growing at the fastest rate in
+              the hiring tech stack.
             </p>
+
+            <div class="bg-green-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-green-300 mb-2">
+                AI Screening Pipeline:
+              </h4>
+              <div class="text-gray-300 space-y-2">
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs mr-3">1</span>
+                  <span>Resume Parsed → Embedded as Vector</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs mr-3">2</span>
+                  <span>Semantic Match Against Job Description</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs mr-3">3</span>
+                  <span>LLM Scores Candidate Suitability</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs mr-3">4</span>
+                  <span>Auto-Reject or Advance to Interview</span>
+                </div>
+              </div>
+            </div>
 
             <div class="flex items-center justify-between">
               <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm"
-                  >#AIDevelopments</span
-                >
-                <span
-                  class="px-3 py-1 bg-teal-500 bg-opacity-30 text-teal-300 rounded-full text-sm"
-                  >#AIReleases</span
-                >
+                <span class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm">#ResumeAI</span>
+                <span class="px-3 py-1 bg-teal-500 bg-opacity-30 text-teal-300 rounded-full text-sm">#HiringTech</span>
               </div>
               <button
-                onclick="
-                  window.open(
-                    'https://www.linkedin.com/pulse/top-8-ai-updates-week-feb-310-2026-rama-sai-kiran-medam-4m1oc',
-                    '_blank',
-                  )
-                "
+                onclick="window.open('https://blog.theinterviewguys.com/how-ai-now-rejects-millions-of-candidates-before-a-human-opens-their-resume/', '_blank')"
                 class="text-green-400 hover:text-green-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
               >
                 Read More →
@@ -2109,7 +1859,154 @@
             </div>
           </div>
 
-          <!-- Mini Article 4 -->
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+          <!-- Article 5 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🏦</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  US Treasury Launches AI Innovation Series for Finance
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 23, 2026</span>
+                  <span class="mr-4">⏱️ 5 min read</span>
+                  <span>🏷️ AI Governance</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              The US Treasury and FSOC launched a public-private AI Innovation
+              Series to embed AI safely across fraud detection, credit
+              underwriting, and operational risk management — four roundtables
+              bringing together regulators and financial institutions to scale
+              AI without compromising stability.
+            </p>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-orange-500 bg-opacity-30 text-orange-300 rounded-full text-sm">#AIPolicy</span>
+                <span class="px-3 py-1 bg-yellow-500 bg-opacity-30 text-yellow-300 rounded-full text-sm">#FinanceAI</span>
+              </div>
+              <button
+                onclick="window.open('https://home.treasury.gov/news/press-releases/sb0421', '_blank')"
+                class="text-orange-400 hover:text-orange-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Article 6 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🔬</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  RF-DETR: Transformer Object Detection Hits SOTA at ICLR 2026
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 26, 2026</span>
+                  <span class="mr-4">⏱️ 9 min read</span>
+                  <span>🏷️ Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Presented at ICLR 2026, RF-DETR is a real-time fully transformer
+              detection architecture built on a DINOv2 backbone. It achieves
+              state-of-the-art accuracy-latency tradeoffs on Microsoft COCO and
+              is open-sourced for fine-tuning on custom datasets.
+            </p>
+
+            <div class="bg-teal-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-teal-300 mb-2">
+                Architecture Highlights:
+              </h4>
+              <ul class="text-gray-300 space-y-1">
+                <li>• <strong>Backbone:</strong> DINOv2 vision transformer</li>
+                <li>• <strong>Speed:</strong> Real-time inference on standard hardware</li>
+                <li>• <strong>Benchmark:</strong> SOTA on MS COCO dataset</li>
+                <li>• <strong>Open Source:</strong> Available for custom fine-tuning</li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-teal-500 bg-opacity-30 text-teal-300 rounded-full text-sm">#RFDETR</span>
+                <span class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm">#ComputerVision</span>
+              </div>
+              <button
+                onclick="window.open('https://hattussa.com/blog/demystifying-rf-detr-iclr-2026/', '_blank')"
+                class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Article 7 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">💼</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  Bloomberg: AI Is Hastening the Résumé's Demise
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 21, 2026</span>
+                  <span class="mr-4">⏱️ 4 min read</span>
+                  <span>🏷️ AI & Work</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Bloomberg argues that AI isn't just eliminating jobs — it's
+              exposing the fundamental flaw in the résumé itself. As LLM-powered
+              screening infers skills from context rather than keywords, the
+              traditional résumé format is becoming structurally obsolete.
+            </p>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-pink-500 bg-opacity-30 text-pink-300 rounded-full text-sm">#FutureOfWork</span>
+                <span class="px-3 py-1 bg-rose-500 bg-opacity-30 text-rose-300 rounded-full text-sm">#AIHiring</span>
+              </div>
+              <button
+                onclick="window.open('https://www.bloomberg.com/opinion/articles/2026-03-21/ai-is-hastening-the-resume-s-demise-good-riddance', '_blank')"
+                class="text-pink-400 hover:text-pink-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Article 8 -->
           <div
             class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
             style="animation-delay: 0.6s"
@@ -2118,51 +2015,156 @@
               <div
                 class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mr-4"
               >
-                <span class="text-2xl">🌍</span>
+                <span class="text-2xl">🌊</span>
               </div>
               <div>
                 <h3 class="text-2xl font-bold text-white mb-1">
-                  UN Establishes Global AI Scientific Panel
+                  Real-Time Underwater Object Detection via Frequency-Domain AI
                 </h3>
                 <div class="flex items-center text-sm text-gray-400">
-                  <span class="mr-4">📅 March 2026</span>
-                  <span class="mr-4">⏱️ 4 min read</span>
-                  <span>🏷️ AI Governance</span>
+                  <span class="mr-4">📅 Mar 24, 2026</span>
+                  <span class="mr-4">⏱️ 9 min read</span>
+                  <span>🏷️ Deep Learning</span>
                 </div>
               </div>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-6">
-              The United Nations approved a 40‑member scientific panel to assess
-              AI’s societal and economic impacts. The panel, with experts from
-              multiple countries, aims to provide global insight on AI
-              governance and risk.
+              Published in Scientific Reports, this paper proposes a lightweight
+              RT-DETR framework for underwater detection. The FasterFDBlock
+              backbone uses frequency-band modulation to suppress noise and
+              enhance edges — solving blurring and low contrast unique to
+              underwater environments.
             </p>
+
+            <div class="bg-red-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-red-300 mb-2">
+                Technical Contributions:
+              </h4>
+              <ul class="text-gray-300 space-y-1">
+                <li>• <strong>FasterFDBlock:</strong> Frequency-domain feature extraction</li>
+                <li>• <strong>Noise Suppression:</strong> Handles underwater scatter &amp; blur</li>
+                <li>• <strong>Lightweight:</strong> Suitable for AUV deployment</li>
+                <li>• <strong>RT-DETR Base:</strong> Real-time transformer detection</li>
+              </ul>
+            </div>
 
             <div class="flex items-center justify-between">
               <div class="flex space-x-2">
-                <span
-                  class="px-3 py-1 bg-red-500 bg-opacity-30 text-red-300 rounded-full text-sm"
-                  >#AIRegulation</span
-                >
-                <span
-                  class="px-3 py-1 bg-orange-500 bg-opacity-30 text-orange-300 rounded-full text-sm"
-                  >#UNAI</span
-                >
+                <span class="px-3 py-1 bg-red-500 bg-opacity-30 text-red-300 rounded-full text-sm">#DeepLearning</span>
+                <span class="px-3 py-1 bg-orange-500 bg-opacity-30 text-orange-300 rounded-full text-sm">#ObjectDetection</span>
               </div>
               <button
-                onclick="
-                  window.open(
-                    'https://apnews.com/article/8936f242689792be7a7ab97e841cade8',
-                    '_blank',
-                  )
-                "
+                onclick="window.open('https://www.nature.com/articles/s41598-025-96628-9', '_blank')"
                 class="text-red-400 hover:text-red-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
               >
                 Read More →
               </button>
             </div>
           </div>
+
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+          <!-- Article 9 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">📊</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  RAG in 2026: From Chatbot Feature to Enterprise Backbone
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 20, 2026</span>
+                  <span class="mr-4">⏱️ 7 min read</span>
+                  <span>🏷️ Enterprise AI</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Advanced RAG is now the strategic backbone of enterprise knowledge
+              management. A major European bank saved over €20M in three years
+              by deploying a RAG-powered audit system — freeing 36 full-time
+              employee equivalents and achieving ROI within two months.
+            </p>
+
+            <div class="bg-green-900 bg-opacity-20 rounded-lg p-4 mb-6">
+              <h4 class="text-lg font-semibold text-green-300 mb-2">
+                Enterprise RAG Use Cases:
+              </h4>
+              <ul class="text-gray-300 space-y-1">
+                <li>• <strong>Audit Automation:</strong> €20M saved in 3 years</li>
+                <li>• <strong>Knowledge Management:</strong> Cross-silo retrieval</li>
+                <li>• <strong>Compliance QA:</strong> Regulation-aware responses</li>
+                <li>• <strong>ROI Timeline:</strong> Under 2 months to breakeven</li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-green-500 bg-opacity-30 text-green-300 rounded-full text-sm">#EnterpriseAI</span>
+                <span class="px-3 py-1 bg-emerald-500 bg-opacity-30 text-emerald-300 rounded-full text-sm">#RAGChatbot</span>
+              </div>
+              <button
+                onclick="window.open('https://squirro.com/squirro-blog/state-of-rag-genai', '_blank')"
+                class="text-green-400 hover:text-green-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
+          <!-- Article 10 -->
+          <div
+            class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-white border-opacity-20 hover:bg-opacity-70 transition duration-500 fade-in-up group"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-violet-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4"
+              >
+                <span class="text-2xl">🚀</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-1">
+                  Google Gemini Personal Intelligence Rolls Out to All US Users
+                </h3>
+                <div class="flex items-center text-sm text-gray-400">
+                  <span class="mr-4">📅 Mar 20, 2026</span>
+                  <span class="mr-4">⏱️ 5 min read</span>
+                  <span>🏷️ LLM Products</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Google expanded its Personal Intelligence feature — which lets
+              Gemini draw on Gmail, Photos, and YouTube data — to all free US
+              users. The opt-in system personalizes responses across Search,
+              Chrome, and the Gemini app without training on private content.
+            </p>
+
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-violet-500 bg-opacity-30 text-violet-300 rounded-full text-sm">#Gemini</span>
+                <span class="px-3 py-1 bg-indigo-500 bg-opacity-30 text-indigo-300 rounded-full text-sm">#LLMProducts</span>
+              </div>
+              <button
+                onclick="window.open('https://www.marketingprofs.com/opinions/2026/54448/ai-update-march-20-2026-ai-news-and-views-from-the-past-week', '_blank')"
+                class="text-violet-400 hover:text-violet-300 font-medium transition duration-300 group-hover:translate-x-2 transform"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+
         </div>
 
         <!-- Learning Journey -->
