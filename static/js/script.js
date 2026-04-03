@@ -87,35 +87,6 @@ function throttle(func, limit) {
 // Add scroll event listener with throttling
 window.addEventListener('scroll', throttle(updateSidebarColors, 16));
 
-// Enhanced hover effects for skill cards
-document.querySelectorAll('#skills .bg-transparent').forEach(card => {
-    // Set initial thin border
-    card.style.border = '1px solid #8b8b8b'; // thin white border
-
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'scale(1.05) rotate(1deg)';
-        card.style.border = '2px solid #ffffff'; // thicker border on hover
-        // card.style.boxShadow = '0 20px 40px rgba(255, 105, 157, 0.3)';
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1) rotate(0deg)';
-        card.style.border = '1px solid #8b8b8b'; // back to thin border
-        card.style.boxShadow = 'none';
-    });
-});
-
-// Enhanced hover effects for project cards
-document.querySelectorAll('#projects .group').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
-        card.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.3)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-        card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
-    });
-});
 
 // Mobile menu toggle with improved functionality
 function toggleMobileMenu() {
