@@ -655,7 +655,7 @@
               clean REST API layer, integrated with Google Gemini 2.0 Flash for AI-generated summaries and
               all-MiniLM-L6-v2 for
               semantic similarity matching. Handles file parsing, vector embeddings, and ranked candidate output —
-              all through a containerized, cloud-deployed backend pipeline on Railway.
+              all through a containerized, cloud-deployed backend Railway.
             </p>
 
             <!-- Tech stack -->
@@ -705,81 +705,77 @@
           </div>
         </div>
 
-        <!-- Project 2 - Django Contact App -->
-        <div
-          class="group bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-gray-800">
-          <!-- Image -->
-          <div class="relative overflow-hidden">
-            <img src="project_img/contact.png" alt="Django Contact App Screenshot"
-              class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
+        <!-- Project 3 - API Rate Limiter -->
+<div
+  class="group bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-gray-800">
+  
+  <!-- Image -->
+  <div class="relative overflow-hidden">
+    <img src="project_img/api rate limit.avif" alt="API Rate Limiter Screenshot"
+      class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
 
-            <!-- Dark overlay -->
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
+    <!-- Dark overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+    </div>
 
-            <!-- Featured badge -->
-            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-              🧩 Featured
-            </div>
-          </div>
+    <!-- Featured badge -->
+    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+      🚀 Featured
+    </div>
+  </div>
 
-          <!-- Content -->
-          <div class="p-4 md:p-8">
-            <h3 class="text-2xl font-bold mb-3 text-white">
-              Django Contact App
-            </h3>
+  <!-- Content -->
+  <div class="p-4 md:p-8">
+    <h3 class="text-2xl font-bold mb-3 text-white">
+      API Rate Limiter
+    </h3>
 
-            <p class="text-gray-300 mb-6 leading-relaxed">
-              A Django web application demonstrating full CRUD operations with
-              server-side rendering. Features user authentication, role-based access control,
-              Django admin customization, and SQLite database with optimized ORM queries.
-              Built with Bootstrap 5 for templating, implementing Django's MVT architecture
-              with proper model design, form validation, and URL routing.
-              Designed with scalability in mind for migration to PostgreSQL.
-            </p>
+    <p class="text-gray-300 mb-6 leading-relaxed">
+      A Django REST Framework-based API rate limiting system that enforces 
+      per-API-key and per-endpoint request limits using Redis. 
+      It features distributed rate tracking with Upstash Redis, secure API key validation, 
+      and dynamic request limits across different endpoints. 
+      The system returns real-time rate limit headers and is designed for scalable, 
+      production-ready backend architectures.
+    </p>
 
-            <!-- Tech stack -->
-            <div class="flex flex-wrap gap-2 mb-10">
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-700 text-white text-sm rounded-full">Python</span>
-              <span class="px-3 py-1 bg-gradient-to-r from-green-600 to-teal-500 text-white text-sm rounded-full">Django
-              </span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm rounded-full">Bootstrap
-                5</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm rounded-full">SQLite3</span>
-            </div>
+    <!-- Tech stack -->
+    <div class="flex flex-wrap gap-2 mb-10">
+      <span class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-700 text-white text-sm rounded-full">Python</span>
+      <span class="px-3 py-1 bg-gradient-to-r from-green-600 to-teal-500 text-white text-sm rounded-full">Django</span>
+      <span class="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm rounded-full">Django REST Framework</span>
+      <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm rounded-full">Redis</span>
+    </div>
 
-            <!-- Buttons -->
-            <div class="flex space-x-4">
-              <!-- Demo Button / You can add URL -->
-              <a href="#"
-                class="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-blue-600 hover:to-purple-700 transition duration-300 transform hover:scale-105">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M4 4l12 6-12 6V4z" />
-                  </svg>
-                  Demo
-                </span>
-              </a>
+    <!-- Buttons -->
+    <div class="flex space-x-4">
+      <!-- Demo Button -->
+      <a href="#"
+        class="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-blue-600 hover:to-purple-700 transition duration-300 transform hover:scale-105">
+        <span class="flex items-center justify-center">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M4 4l12 6-12 6V4z" />
+          </svg>
+          Demo
+        </span>
+      </a>
 
-              <!-- GitHub Button -->
-              <a href="https://github.com/Ar-jun-fs9/django-contact-crud-app" target="_blank"
-                class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  GitHub
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <!-- GitHub Button -->
+      <a href="https://github.com/Ar-jun-fs9/api-rate-limiter" target="_blank"
+        class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300">
+        <span class="flex items-center justify-center">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.310.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+              clip-rule="evenodd"></path>
+          </svg>
+          GitHub
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
 
         <!-- Project 3 - ISMT College RAG Chatbot -->
         <div
