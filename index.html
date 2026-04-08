@@ -1,1794 +1,1941 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arjun Bhul Portfolio</title>
+    <meta
+      name="description"
+      content="Professional portfolio of Arjun Bhul, a Backend Python Developer specializing in Django, FastAPI, REST APIs, database design, and scalable backend systems."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, backend developer, python, django, fastapi, REST API, postgresql, redis, docker, backend, API development"
+    />
+    <link rel="icon" href="assets/Myfavicon.ico" type="image/x-icon" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style/styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              navy: {
+                50: "#f8fafc",
+                100: "#f1f5f9",
+                200: "#e2e8f0",
+                300: "#cbd5e1",
+                400: "#94a3b8",
+                500: "#64748b",
+                600: "#475569",
+                700: "#334155",
+                800: "#1e293b",
+                900: "#0f172a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arjun Bhul Portfolio</title>
-  <meta name="description"
-    content="Professional portfolio of Arjun Bhul, a Backend Python Developer specializing in Django, FastAPI, REST APIs, database design, and scalable backend systems." />
-  <meta name="keywords"
-    content="portfolio, backend developer, python, django, fastapi, REST API, postgresql, redis, docker, backend, API development" />
-  <link rel="icon" href="assets/Myfavicon.ico" type="image/x-icon" />
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts for Anime-style Typography -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <!-- Custom Styles for Animations -->
-  <link rel="stylesheet" href="static/style/styles.css" />
-</head>
-
-<body class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white font-['Poppins'] overflow-x-hidden">
-  <!-- Floating Sidebar -->
-  <div id="floating-sidebar" class="fixed left-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
-    <div class="space-y-4">
-      <a href="#hero"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="hero">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-          </path>
-        </svg>
-      </a>
-      <a href="#about"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="about">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-        </svg>
-      </a>
-      <a href="#skills"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="skills">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-          </path>
-        </svg>
-      </a>
-      <a href="#projects"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="projects">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-          </path>
-        </svg>
-      </a>
-      <a href="#tech-stack"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="tech-stack">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-          </path>
-        </svg>
-      </a>
-      <a href="#blog"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="blog">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-          </path>
-        </svg>
-      </a>
-      <a href="#contact"
-        class="sidebar-link w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-        data-section="contact">
-        <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-          </path>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 z-50 backdrop-blur-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#hero" class="flex items-center space-x-3 cursor-pointer">
-        <div class="w-12 h-12 border-2 border-white rounded-lg flex items-center justify-center">
-          <img src="./assets/icon.png" alt="Icon" class="w-12 h-12" />
-        </div>
-
-        <div class="text-2xl font-bold">Welcome</div>
-      </a>
-      <div class="hidden lg:flex items-center space-x-8">
-        <a href="#hero"
-          class="nav-link text-white hover:text-blue-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Home</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#about"
-          class="nav-link text-white hover:text-blue-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">About</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#skills"
-          class="nav-link text-white hover:text-green-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Backend Skills</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-teal-500 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#projects"
-          class="nav-link text-white hover:text-yellow-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Projects</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#tech-stack"
-          class="nav-link text-white hover:text-yellow-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Tech Stack</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#blog"
-          class="nav-link text-white hover:text-indigo-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Blog</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-        <a href="#contact"
-          class="nav-link text-white hover:text-purple-400 transition duration-300 text-sm font-medium relative group">
-          <span class="relative z-10">Contact</span>
-          <div
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-300">
-          </div>
-        </a>
-      </div>
-
-      <div class="flex items-center space-x-4">
-        <div class="hidden md:flex items-center space-x-2 text-sm text-gray-300">
-          <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <span>Available for Backend Projects</span>
-        </div>
-
-        <div class="block lg:hidden">
-          <button id="mobile-menu-btn"
-            class="text-white focus:outline-none p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition duration-300"
-            aria-label="Toggle mobile menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-      class="hidden bg-black bg-opacity-95 backdrop-blur-md border-t border-white border-opacity-10 lg:hidden">
-      <div class="container mx-auto px-4 py-6">
-        <div class="flex flex-col space-y-4">
-          <a href="#hero"
-            class="nav-link text-white hover:text-blue-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">Home</a>
-          <a href="#about"
-            class="nav-link text-white hover:text-blue-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">About</a>
-          <a href="#skills"
-            class="nav-link text-white hover:text-green-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">Backend
-            Skills</a>
-          <a href="#projects"
-            class="nav-link text-white hover:text-yellow-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">Projects</a>
-          <a href="#tech-stack"
-            class="nav-link text-white hover:text-yellow-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">Tech
-            Stack</a>
-          <a href="#blog"
-            class="nav-link text-white hover:text-indigo-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 border-b border-white border-opacity-10">Blog</a>
-          <a href="#contact"
-            class="nav-link text-white hover:text-purple-400 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero" class="h-screen flex flex-col justify-center items-center relative overflow-hidden">
-    <!-- AI/ML Themed Background -->
-    <div class="absolute inset-0">
-      <!-- Neural Network Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <svg class="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="neural" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <circle cx="20" cy="20" r="2" fill="#ff6b9d" opacity="0.6" />
-              <circle cx="80" cy="20" r="2" fill="#4ecdc4" opacity="0.6" />
-              <circle cx="50" cy="50" r="2" fill="#45b7d1" opacity="0.6" />
-              <circle cx="20" cy="80" r="2" fill="#ff6b9d" opacity="0.6" />
-              <circle cx="80" cy="80" r="2" fill="#4ecdc4" opacity="0.6" />
-              <line x1="20" y1="20" x2="50" y2="50" stroke="#ff6b9d" stroke-width="0.5" opacity="0.3" />
-              <line x1="80" y1="20" x2="50" y2="50" stroke="#4ecdc4" stroke-width="0.5" opacity="0.3" />
-              <line x1="20" y1="80" x2="50" y2="50" stroke="#45b7d1" stroke-width="0.5" opacity="0.3" />
-              <line x1="80" y1="80" x2="50" y2="50" stroke="#ff6b9d" stroke-width="0.5" opacity="0.3" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#neural)" />
-        </svg>
-      </div>
-
-      <!-- Animated AI Elements -->
-      <div
-        class="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse">
-      </div>
-      <div
-        class="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
-        style="animation-delay: 2s"></div>
-      <div
-        class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
-        style="animation-delay: 4s"></div>
-    </div>
-    <div class="text-center z-10 p-2">
-      <div
-        class="w-28 h-28 mb-4 mx-auto rounded-full bg-gradient-to-r from-yellow-400 to-blue-500 p-1 shadow-xl animate-pulse">
-        <img src="./assets/python.png" alt="Backend Python Developer"
-          class="w-full h-full rounded-full object-contain bg-white p-2" />
-      </div>
-      <h1 class="text-6xl md:text-8xl font-bold mb-6 anime-text typing">
-        Arjun Bhul
-      </h1>
-      <p class="text-xl md:text-3xl text-gray-300 mb-8 fade-in-up font-light" style="animation-delay: 3s">
-        Building scalable APIs, robust backends & intelligent systems with Python
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-        <a href="#projects"
-          class="px-8 py-4 bg-white border-2 border-white text-black font-semibold rounded-xl hover:text-gray-900 transition duration-300 flex items-center space-x-2">
-
-          <span>View My Backend Projects</span>
-        </a>
-        <a href="#contact"
-          class="px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition duration-300 flex items-center space-x-2">
-
-          <span>Let's Collaborate</span>
-        </a>
-      </div>
-
-      <!-- Tech Stack Preview -->
-      <div class="flex flex-wrap justify-center gap-4 mt-8 opacity-75">
-        <div
-          class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20">
-          Django
-        </div>
-        <div
-          class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20">
-          FastAPI
-        </div>
-        <div
-          class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20">
-          PostgreSQL
-        </div>
-        <div
-          class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20">
-          Redis
-        </div>
-        <div
-          class="px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white border-opacity-20">
-          Docker
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about"
-    class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-      <!-- Removed floating icons -->
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4 anime-text">
-          About Me
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="slide-in-left">
-          <div class="relative">
-            <img src="image/Moody.png" alt="Arjun Bhul - Backend Python Developer"
-              class="w-full h-full rounded-2xl mx-auto shadow-2xl object-cover " />
+  <body class="font-inter bg-white text-gray-800 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white z-50 backdrop-blur-md border-b border-gray-100 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 sm:h-18">
+          <a href="#hero" class="flex items-center space-x-3 cursor-pointer">
             <div
-              class="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-              9+
+              class="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center"
+            >
+              <img src="./assets/icon.png" alt="Icon" class="w-8 h-8 rounded" />
             </div>
-            <div class="absolute -top-4 -left-4 bg-white rounded-full p-3 shadow-lg">
-              <span class="text-2xl">🧑‍💻</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="slide-in-right space-y-6">
-          <div class="space-y-4">
-            <p class="text-xl leading-relaxed text-gray-300">
-              Hi, I'm
-              <span class="font-bold text-blue-600">Arjun Bhul</span>,
-              a Python developer focused on backend development. I build APIs and web
-              applications using Django and FastAPI, and I also work on full-stack
-              projects with Next.js.
-            </p>
-
-            <p class="text-lg leading-relaxed text-gray-300">
-              I enjoy creating simple, reliable, and scalable backend systems. My work
-              includes API design, database management, authentication systems, and
-              building applications that perform efficiently in real-world use.
-            </p>
-
-            <p class="text-lg leading-relaxed text-gray-300">
-              Right now, I’m learning FastAPI more deeply, building projects with Django
-              and FastAPI, and exploring AI integration in modern applications. I’m
-              always learning new technologies and improving my backend development skills.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-              <div class="text-3xl mb-2">🔧</div>
-              <div class="font-semibold text-white">API Architect</div>
-            </div>
-            <div class="p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-              <div class="text-3xl mb-2">🐍</div>
-              <div class="font-semibold text-white">Python Developer</div>
-            </div>
-            <div class="p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-              <div class="text-3xl mb-2">🗄️</div>
-              <div class="font-semibold text-white">Database Designer</div>
-            </div>
-            <div class="p-4 rounded-xl shadow-lg text-center hover:shadow-xl transition duration-300">
-              <div class="text-3xl mb-2">⚡</div>
-              <div class="font-semibold text-white">Backend Engineer</div>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-3">
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">Django</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">FastAPI</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">DRF</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">PostgreSQL</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">Redis</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">Docker</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">Git</span>
-            <span
-              class="px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-800 text-white rounded-full text-sm font-medium hover:scale-105 transition duration-300 cursor-pointer shadow-lg">GitHub
-              Actions</span>
+            <div class="text-xl font-bold text-gray-900">Arjun Bhul</div>
+          </a>
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="#hero"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              About
+            </a>
+            <a
+              href="#skills"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Backend Skills
+            </a>
+            <a
+              href="#projects"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Projects
+            </a>
+            <a
+              href="#tech-stack"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Tech Stack
+            </a>
+            <a
+              href="#blog"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Blog
+            </a>
+            <a
+              href="#contact"
+              class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            >
+              Contact
+            </a>
           </div>
 
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills"
-    class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden">
-    <!-- Animated Background -->
-    <div class="absolute inset-0">
-      <div
-        class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse">
-      </div>
-      <div
-        class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
-        style="animation-delay: 3s"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white anime-text">
-          Backend Skills & Expertise
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-        <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
-          Building scalable, maintainable backend systems with Python
-          frameworks, databases, and modern DevOps practices
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Python Frameworks -->
-        <div
-          class="bg-transparent border border-gray-700 p-8 rounded-2xl text-center hover:scale-105 transition duration-500 fade-in-up">
-          <div class="text-7xl mb-6 group-hover:animate-bounce">🐍</div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            Python Frameworks
-          </h3>
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">Django</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">FastAPI</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">DRF</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases & Caching -->
-        <div
-          class="bg-transparent p-8 border border-gray-700 rounded-2xl text-center hover:scale-105 transition duration-500 fade-in-up"
-          style="animation-delay: 0.2s">
-          <div class="text-7xl mb-6 group-hover:animate-bounce">🗄️</div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            Databases & Caching
-          </h3>
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">PostgreSQL</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">Redis</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-red-400 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">SQLite</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- API Design & Auth -->
-        <div
-          class="bg-transparent p-8 border border-gray-700 rounded-2xl text-center hover:scale-105 transition duration-500 fade-in-up"
-          style="animation-delay: 0.4s">
-          <div class="text-7xl mb-6 group-hover:animate-bounce">🔐</div>
-          <h3 class="text-2xl font-bold text-white mb-4">API Design & Auth</h3>
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">REST APIs</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">JWT Auth</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">OAuth2</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DevOps & Tools -->
-        <div
-          class="bg-transparent p-8 border border-gray-700 rounded-2xl text-center hover:scale-105 transition duration-500 fade-in-up"
-          style="animation-delay: 0.6s">
-          <div class="text-7xl mb-6 group-hover:animate-bounce">⚙️</div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            DevOps & Tools
-          </h3>
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">Docker</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">Git & GitHub</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-300">CI/CD</span>
-              <div class="flex space-x-1">
-                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Backend Stats -->
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div class="text-center fade-in-up" style="animation-delay: 0.8s">
-          <div class="text-4xl font-bold text-blue-400 mb-2">15+</div>
-          <div class="text-gray-300">Projects Completed</div>
-        </div>
-        <div class="text-center fade-in-up" style="animation-delay: 1s">
-          <div class="text-4xl font-bold text-green-400 mb-2">10+</div>
-          <div class="text-gray-300">APIs Built</div>
-        </div>
-        <div class="text-center fade-in-up" style="animation-delay: 1.2s">
-          <div class="text-4xl font-bold text-blue-400 mb-2">5+</div>
-          <div class="text-gray-300">Databases Designed</div>
-        </div>
-        <div class="text-center fade-in-up" style="animation-delay: 1.4s">
-          <div class="text-4xl font-bold text-green-400 mb-2">3+</div>
-          <div class="text-gray-300">Deployed Systems</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects"
-    class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-      <!-- Removed floating icons -->
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4 anime-text">
-          Featured Backend Projects
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-        <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
-          Showcasing my backend engineering work — from API design to deployment
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Project 2 - Backend + AI Resume Screener -->
-        <div
-          class="group bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2  border border-gray-800"
-          style="animation-delay: 0.2s">
-          <!-- Image -->
-          <div class="relative overflow-hidden">
-            <img src="project_img/AI Resume.avif" alt="AI-Powered Resume Screener"
-              class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
+          <div class="flex items-center space-x-4">
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+              class="hidden md:flex items-center space-x-2 text-sm text-gray-500"
+            >
+              <div
+                class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+              ></div>
+              <span>Available for Backend Projects</span>
             </div>
-            <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-              ⚙️ Backend + AI
+
+            <div class="block lg:hidden">
+              <button
+                id="mobile-menu-btn"
+                class="text-gray-700 focus:outline-none p-2 hover:bg-gray-100 rounded-lg transition duration-300"
+                aria-label="Toggle mobile menu"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-white border-t border-gray-100 lg:hidden"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#hero"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >Backend Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >Projects</a
+            >
+            <a
+              href="#tech-stack"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >Tech Stack</a
+            >
+            <a
+              href="#blog"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 border-b border-gray-100"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-gray-900 transition duration-300 py-3 px-4 rounded-lg hover:bg-gray-50"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center bg-white pt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left order-2 lg:order-1">
+            <div
+              class="inline-block px-4 py-1.5 bg-gray-100 text-gray-600 text-xs font-semibold tracking-wider uppercase rounded-full mb-6"
+            >
+              Backend Python Developer
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+            >
+              Building Scalable
+              <span class="text-gray-700">Backends</span>
+            </h1>
+            <p
+              class="text-lg sm:text-xl text-gray-500 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+            >
+              Building scalable APIs, robust backends & intelligent systems with
+              Python
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#projects"
+                class="bg-gray-900 text-white px-8 py-3.5 rounded-lg font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                View My Backend Projects
+              </a>
+              <a
+                href="#contact"
+                class="border-2 border-gray-300 text-gray-700 px-8 py-3.5 rounded-lg font-medium hover:bg-gray-50 transition-all duration-200"
+              >
+                Let's Collaborate
+              </a>
+            </div>
+
+            <!-- Tech Stack Preview -->
+            <div
+              class="flex flex-wrap justify-center lg:justify-start gap-3 mt-10"
+            >
+              <span
+                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                >Django</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                >FastAPI</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                >PostgreSQL</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                >Redis</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                >Docker</span
+              >
             </div>
           </div>
 
-          <!-- Content -->
-          <div class="p-4 md:p-8">
-            <h3 class="text-2xl font-bold mb-3 text-white">
-              AI Resume Screener API
+          <div class="relative order-1 lg:order-2">
+            <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gray-100 rounded-full"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gray-200/30 rounded-full"></div> -->
+            <div class="relative">
+              <div
+                class="w-64 h-64 mx-auto rounded-2xl bg-gray-900 shadow-2xl flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="./assets/python.png"
+                  alt="Backend Python Developer"
+                  class="w-40 h-40 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <div
+          class="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center"
+        >
+          <div
+            class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            About Me
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="relative">
+              <img
+                src="image/Moody.png"
+                alt="Arjun Bhul - Backend Python Developer"
+                class="w-full max-w-lg mx-auto rounded-2xl shadow-lg object-cover"
+              />
+              <!-- <div
+                class="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg"
+              >
+                9+
+              </div> -->
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <p class="text-lg leading-relaxed text-gray-600">
+                Hi, I'm
+                <span class="font-semibold text-gray-900">Arjun Bhul</span>, a
+                Python developer focused on backend development. I build APIs
+                and web applications using Django and FastAPI, and I also work
+                on full-stack projects with Next.js.
+              </p>
+
+              <p class="text-lg leading-relaxed text-gray-600">
+                I enjoy creating simple, reliable, and scalable backend systems.
+                My work includes API design, database management, authentication
+                systems, and building applications that perform efficiently in
+                real-world use.
+              </p>
+
+              <p class="text-lg leading-relaxed text-gray-600">
+                Right now, I'm learning FastAPI more deeply, building projects
+                with Django and FastAPI, and exploring AI integration in modern
+                applications. I'm always learning new technologies and improving
+                my backend development skills.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="p-4 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300"
+              >
+                <div class="text-3xl mb-2">⚙️</div>
+                <div class="font-semibold text-gray-900">API Architect</div>
+              </div>
+              <div
+                class="p-4 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300"
+              >
+                <div class="text-3xl mb-2">🐍</div>
+                <div class="font-semibold text-gray-900">Python Developer</div>
+              </div>
+              <div
+                class="p-4 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300"
+              >
+                <div class="text-3xl mb-2">🗄️</div>
+                <div class="font-semibold text-gray-900">Database Designer</div>
+              </div>
+              <div
+                class="p-4 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300"
+              >
+                <div class="text-3xl mb-2">⚡</div>
+                <div class="font-semibold text-gray-900">Backend Engineer</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >Django</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >FastAPI</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >DRF</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >PostgreSQL</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >Redis</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >Docker</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >Git</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium"
+                >GitHub Actions</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Backend Skills & Expertise
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+          <p class="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+            Building scalable, maintainable backend systems with Python
+            frameworks, databases, and modern DevOps practices
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Python Frameworks -->
+          <div
+            class="bg-gray-50 border border-gray-200 p-8 rounded-xl text-center hover:shadow-lg transition duration-300"
+          >
+            <div class="text-6xl mb-6">🐍</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Python Frameworks
             </h3>
-
-            <p class="text-gray-300 mb-6 leading-relaxed">
-              A Python backend API for resume screening and candidate ranking. Built with Flask, featuring a
-              clean REST API layer, integrated with Google Gemini 2.0 Flash for AI-generated summaries and
-              all-MiniLM-L6-v2 for
-              semantic similarity matching. Handles file parsing, vector embeddings, and ranked candidate output —
-              all through a containerized, cloud-deployed backend Railway.
-            </p>
-
-            <!-- Tech stack -->
-            <div class="flex flex-wrap gap-2 mb-10">
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-700 text-white text-sm rounded-full">Python</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white text-sm rounded-full">Flask</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm rounded-full">Google
-                Gemini</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm rounded-full">TinyLlama</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-sm rounded-full">MiniLM</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm rounded-full">Embedding
-                Model</span>
-            </div>
-
-            <!-- Buttons -->
-            <div class="flex space-x-4">
-              <!-- Live Demo -->
-              <a href="https://ai-llm-resume-screener-production.up.railway.app/" target="_blank"
-                class="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-purple-600 hover:to-indigo-700 transition duration-300 transform hover:scale-105">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M4 4l12 6-12 6V4z" />
-                  </svg>
-                  Live
-                </span>
-              </a>
-
-              <!-- GitHub -->
-              <a href="https://github.com/Ar-jun-fs9/ai-llm-resume-screener" target="_blank"
-                class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  GitHub
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 - API Rate Limiter -->
-<div
-  class="group bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-gray-800">
-  
-  <!-- Image -->
-  <div class="relative overflow-hidden">
-    <img src="project_img/api rate limit.avif" alt="API Rate Limiter Screenshot"
-      class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
-
-    <!-- Dark overlay -->
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-    </div>
-
-    <!-- Featured badge -->
-    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-      🚀 Featured
-    </div>
-  </div>
-
-  <!-- Content -->
-  <div class="p-4 md:p-8">
-    <h3 class="text-2xl font-bold mb-3 text-white">
-      API Rate Limiter
-    </h3>
-
-    <p class="text-gray-300 mb-6 leading-relaxed">
-      A Django REST Framework-based API rate limiting system that enforces 
-      per-API-key and per-endpoint request limits using Redis. 
-      It features distributed rate tracking with Upstash Redis, secure API key validation, 
-      and dynamic request limits across different endpoints. 
-      The system returns real-time rate limit headers and is designed for scalable, 
-      production-ready backend architectures.
-    </p>
-
-    <!-- Tech stack -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <span class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-700 text-white text-sm rounded-full">Python</span>
-      <span class="px-3 py-1 bg-gradient-to-r from-green-600 to-teal-500 text-white text-sm rounded-full">Django</span>
-      <span class="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm rounded-full">Django REST Framework</span>
-      <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm rounded-full">Redis</span>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex space-x-4">
-      <!-- Demo Button -->
-      <a href="#"
-        class="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-blue-600 hover:to-purple-700 transition duration-300 transform hover:scale-105">
-        <span class="flex items-center justify-center">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M4 4l12 6-12 6V4z" />
-          </svg>
-          Demo
-        </span>
-      </a>
-
-      <!-- GitHub Button -->
-      <a href="https://github.com/Ar-jun-fs9/api-rate-limiter" target="_blank"
-        class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300">
-        <span class="flex items-center justify-center">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.310.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-              clip-rule="evenodd"></path>
-          </svg>
-          GitHub
-        </span>
-      </a>
-    </div>
-  </div>
-</div>
-
-        <!-- Project 3 - ISMT College RAG Chatbot -->
-        <div
-          class="group bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 fade-in-up transform hover:-translate-y-2 border border-gray-800"
-          style="animation-delay: 0.4s">
-          <!-- Image -->
-          <div class="relative overflow-hidden">
-            <img src="project_img/RAG_Chatbot.avif" alt="ISMT College RAG Chatbot"
-              class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-              ⚙️ Backend + AI
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">Django</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">FastAPI</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">DRF</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Content -->
-          <div class="p-4 md:p-8">
-            <h3 class="text-2xl font-bold mb-3 text-white">
-              ISMT College RAG Chatbot
+          <!-- Databases & Caching -->
+          <div
+            class="bg-gray-50 border border-gray-200 p-8 rounded-xl text-center hover:shadow-lg transition duration-300"
+          >
+            <div class="text-6xl mb-6">🗄️</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Databases & Caching
             </h3>
-
-            <p class="text-gray-300 mb-6 leading-relaxed">
-              A Python backend API implementing Retrieval-Augmented Generation (RAG) for ISMT College. Built with Flask,
-              featuring RESTful endpoints, integrated with Groq Cloud LLM and ChromaDB for vector storage. Handles
-              document
-              chunking, embedding generation, semantic search, and source-verified responses through a clean API
-              interface.
-              Deployed on Railway with containerized architecture.
-            </p>
-
-            <!-- Tech stack -->
-            <div class="flex flex-wrap gap-2 mb-10">
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-700 text-white text-sm rounded-full">Python</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white text-sm rounded-full">Flask</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm rounded-full">Groq
-                Cloud</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm rounded-full">LLM</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-sm rounded-full">ChromaDB</span>
-              <span
-                class="px-3 py-1 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm rounded-full">Embedding
-                Model</span>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">PostgreSQL</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">Redis</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">SQLite</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <!-- Buttons -->
-            <div class="flex space-x-4">
-              <!-- Live Demo -->
-              <a href="https://ismt-college-rag-chatbot-production.up.railway.app/" target="_blank"
-                class="flex-1 bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-6 rounded-full text-center font-medium hover:from-green-600 hover:to-teal-700 transition duration-300 transform hover:scale-105">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M4 4l12 6-12 6V4z" />
-                  </svg>
-                  Live
-                </span>
-              </a>
+          <!-- API Design & Auth -->
+          <div
+            class="bg-gray-50 border border-gray-200 p-8 rounded-xl text-center hover:shadow-lg transition duration-300"
+          >
+            <div class="text-6xl mb-6">🔐</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              API Design & Auth
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">REST APIs</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">JWT Auth</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">OAuth2</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <!-- GitHub -->
-              <a href="https://github.com/Ar-jun-fs9/ismt-college-rag-chatbot" target="_blank"
-                class="flex-1 border-2 border-white border-opacity-30 text-white py-3 px-6 rounded-full text-center font-medium hover:bg-white hover:bg-opacity-10 transition duration-300">
-                <span class="flex items-center justify-center">
-                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  GitHub
-                </span>
-              </a>
+          <!-- DevOps & Tools -->
+          <div
+            class="bg-gray-50 border border-gray-200 p-8 rounded-xl text-center hover:shadow-lg transition duration-300"
+          >
+            <div class="text-6xl mb-6">⚙️</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">DevOps & Tools</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">Docker</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">Git & GitHub</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600">CI/CD</span>
+                <div class="flex space-x-1">
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Backend Stats -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gray-900 mb-2">15+</div>
+            <div class="text-gray-500">Projects Completed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gray-900 mb-2">10+</div>
+            <div class="text-gray-500">APIs Built</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gray-900 mb-2">5+</div>
+            <div class="text-gray-500">Databases Designed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gray-900 mb-2">3+</div>
+            <div class="text-gray-500">Deployed Systems</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Featured Backend Projects
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+          <p class="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+            Showcasing my backend engineering work — from API design to
+            deployment
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Project 1 - AI Resume Screener -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group overflow-hidden"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="project_img/AI Resume.avif"
+                alt="AI-Powered Resume Screener"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-medium"
+              >
+                Backend + AI
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                AI Resume Screener API
+              </h3>
+              <p class="text-gray-500 mb-4 text-sm leading-relaxed">
+                A Python backend API for resume screening and candidate ranking.
+                Built with Flask, featuring a clean REST API layer, integrated
+                with Google Gemini 2.0 Flash for AI-generated summaries and
+                all-MiniLM-L6-v2 for semantic similarity matching. Handles file
+                parsing, vector embeddings, and ranked candidate output — all
+                through a containerized, cloud-deployed backend Railway.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Flask</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Google Gemini</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >TinyLlama</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >MiniLM</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://ai-llm-resume-screener-production.up.railway.app/"
+                  target="_blank"
+                  class="flex-1 bg-gray-900 text-white py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-800 transition duration-200"
+                >
+                  Live
+                </a>
+                <a
+                  href="https://github.com/Ar-jun-fs9/ai-llm-resume-screener"
+                  target="_blank"
+                  class="flex-1 border border-gray-300 text-gray-700 py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-50 transition duration-200"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - API Rate Limiter -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group overflow-hidden"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="project_img/api rate limit.avif"
+                alt="API Rate Limiter"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-700 text-white px-3 py-1 rounded-full text-xs font-medium"
+              >
+                Featured
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                API Rate Limiter
+              </h3>
+              <p class="text-gray-500 mb-4 text-sm leading-relaxed">
+                A Django REST Framework-based API rate limiting system that
+                enforces per-API-key and per-endpoint request limits using
+                Redis. It features distributed rate tracking with Upstash Redis,
+                secure API key validation, and dynamic request limits across
+                different endpoints. The system returns real-time rate limit
+                headers and is designed for scalable, production-ready backend
+                architectures.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Django</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >DRF</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Redis</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="flex-1 bg-gray-900 text-white py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-800 transition duration-200"
+                >
+                  Demo
+                </a>
+                <a
+                  href="https://github.com/Ar-jun-fs9/api-rate-limiter"
+                  target="_blank"
+                  class="flex-1 border border-gray-300 text-gray-700 py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-50 transition duration-200"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 - ISMT College RAG Chatbot -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group overflow-hidden"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="project_img/RAG_Chatbot.avif"
+                alt="ISMT College RAG Chatbot"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-medium"
+              >
+                Backend + AI
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                ISMT College RAG Chatbot
+              </h3>
+              <p class="text-gray-500 mb-4 text-sm leading-relaxed">
+                A Python backend API implementing Retrieval-Augmented Generation
+                (RAG) for ISMT College. Built with Flask, featuring RESTful
+                endpoints, integrated with Groq Cloud LLM and ChromaDB for
+                vector storage. Handles document chunking, embedding generation,
+                semantic search, and source-verified responses through a clean
+                API interface. Deployed on Railway with containerized
+                architecture.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Flask</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >Groq Cloud</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                  >ChromaDB</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://ismt-college-rag-chatbot-production.up.railway.app/"
+                  target="_blank"
+                  class="flex-1 bg-gray-900 text-white py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-800 transition duration-200"
+                >
+                  Live
+                </a>
+                <a
+                  href="https://github.com/Ar-jun-fs9/ismt-college-rag-chatbot"
+                  target="_blank"
+                  class="flex-1 border border-gray-300 text-gray-700 py-2.5 px-4 rounded-lg text-center text-sm font-medium hover:bg-gray-50 transition duration-200"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- See All Projects Button -->
         <div class="mt-12 text-center">
-          <a href="https://github.com/Ar-jun-fs9" target="_blank"
-            class="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition duration-300 flex items-center space-x-2">
-            <span>See All Projects</span>
-            <svg class="w-5 h-5 ml-3 animate-bounce" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          <a
+            href="https://github.com/Ar-jun-fs9"
+            target="_blank"
+            class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition duration-200"
+          >
+            See All Projects
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
             </svg>
           </a>
         </div>
 
         <!-- Call to Action -->
-        <div class="text-center mt-16">
-
-          <a href="#contact"
-            class="inline-flex bg-white items-center px-5 py-2 border border-gray-600 text-black font-semibold rounded-xl hover:text-gray-900 transition duration-300 flex items-center space-x-2">
-            Build Together ⚙️
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition duration-200"
+          >
+            Build Together
           </a>
         </div>
       </div>
-  </section>
+    </section>
 
-  <!-- Tech Stack Section -->
-  <section id="tech-stack"
-    class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-10 left-10 text-8xl">⚡</div>
-      <div class="absolute top-20 right-20 text-6xl">🤖</div>
-      <div class="absolute bottom-20 left-1/4 text-7xl">🚀</div>
-      <div class="absolute bottom-10 right-10 text-5xl">💫</div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16 flex items-center justify-center flex-col">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4">
-          <span class="anime-text">Tech Stack</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-        <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
-          A comprehensive toolkit of cutting-edge technologies and frameworks
-          I use to build intelligent systems and scalable applications.
-        </p>
-      </div>
-
-      <!-- Core Backend (Primary - 90%) -->
-      <div class="mb-16">
-        <h3 class="text-3xl font-bold text-center mb-8 text-white">
-          Core Backend
-        </h3>
-        <div class="flex flex-wrap justify-center gap-4">
-          <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white" alt="Django"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" alt="FastAPI"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/Django_REST_Framework-092E20?logo=django&logoColor=white" alt="DRF"
-            class="hover:scale-110 transition duration-300" />
-          <!-- <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white" alt="Flask"
-            class="hover:scale-110 transition duration-300" /> -->
-          <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white" alt="Redis"
-            class="hover:scale-110 transition duration-300" />
-          <!-- <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite"
-            class="hover:scale-110 transition duration-300" /> -->
-          <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" alt="Docker"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" alt="Git"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white"
-            alt="GitHub Actions" class="hover:scale-110 transition duration-300" />
-        </div>
-      </div>
-
-      <!-- AI Integration (Secondary - 7%) -->
-      <!-- <div class="mb-16">
-        <h3 class="text-3xl font-bold text-center mb-8 text-white">
-          🤖 AI Integration (Secondary)
-        </h3>
-        <div class="flex flex-wrap justify-center gap-4">
-          <img src="https://img.shields.io/badge/LangChain-%2300CCBB.svg?logoColor=white" alt="LangChain"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white" alt="OpenAI"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/Chroma-F7B500?logo=chroma&logoColor=white" alt="Chroma"
-            class="hover:scale-110 transition duration-300" />
-          <img src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black" alt="HuggingFace"
-            class="hover:scale-110 transition duration-300" />
-        </div>
-      </div> -->
-
-      <!-- Frontend (Familiar - 3%) -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-center mb-4 text-white">
-          Frontend
-        </h3>
-        <div class="flex flex-wrap justify-center gap-4">
-          <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" />
-          <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white" />
-        </div>
-      </div>
-
-      <!-- Tech Stack Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-        <div
-          class="text-center bg-transparent bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-gray-600 border-opacity-30">
-          <div class="text-4xl font-bold text-blue-400 mb-2">5+</div>
-          <div class="text-gray-300">Backend Technologies</div>
-        </div>
-        <div
-          class="text-center bg-transparent bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-gray-600 border-opacity-20">
-          <div class="text-4xl font-bold text-purple-400 mb-2">3</div>
-          <div class="text-gray-300">Python Frameworks</div>
-        </div>
-        <div
-          class="text-center bg-transparent bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-gray-600 border-opacity-30">
-          <div class="text-4xl font-bold text-blue-400 mb-2">2</div>
-          <div class="text-gray-300">Databases & Caches</div>
-        </div>
-        <div
-          class="text-center bg-transparent bg-opacity-10 backdrop-blur-lg p-6 rounded-2xl border border-gray-600 border-opacity-30">
-          <div class="text-4xl font-bold text-green-400 mb-2">24/7</div>
-          <div class="text-gray-300">Learning Mode</div>
-        </div>
-      </div>
-
-      <!-- Call to Action -->
-      <div class="text-center">
-        <div
-          class="bg-transparent bg-opacity-5 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30">
-          <h3 class="text-2xl font-bold text-white mb-4">
-            Ready to Build Something Amazing?
-          </h3>
-          <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Let's build robust backend systems together. From REST APIs to database design,
-            I'm ready to architect the server-side of your vision.
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Tech Stack
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+          <p class="text-lg text-gray-500 mt-4 max-w-3xl mx-auto">
+            A comprehensive toolkit of cutting-edge technologies and frameworks
+            I use to build intelligent systems and scalable applications.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact"
-              class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-              Start a Project
-            </a>
-            <a href="#projects"
-              class="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition duration-300">
-              View My Work
-            </a>
-          </div>
+        </div>
 
-          <!-- Fun Facts Section -->
-          <div class="mt-12">
-            <h3 class="text-2xl font-bold text-white mb-6 text-center">
-              Fun Facts & Hobbies
+        <!-- Core Backend -->
+        <div class="mb-12">
+          <h3 class="text-xl font-bold text-center mb-8 text-gray-900">
+            Core Backend
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img
+              src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white"
+              alt="Python"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white"
+              alt="Django"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white"
+              alt="FastAPI"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Django_REST_Framework-092E20?logo=django&logoColor=white"
+              alt="DRF"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"
+              alt="PostgreSQL"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white"
+              alt="Redis"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white"
+              alt="Docker"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white"
+              alt="Git"
+              class="hover:scale-110 transition duration-300"
+            />
+            <img
+              src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white"
+              alt="GitHub Actions"
+              class="hover:scale-110 transition duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="mb-12">
+          <h3 class="text-lg font-bold text-center mb-4 text-gray-900">
+            Frontend
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <img
+              src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white"
+            />
+            <img
+              src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white"
+            />
+          </div>
+        </div>
+
+        <!-- Tech Stack Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div
+            class="text-center bg-gray-50 p-6 rounded-xl border border-gray-200"
+          >
+            <div class="text-4xl font-bold text-gray-900 mb-2">5+</div>
+            <div class="text-gray-500">Backend Technologies</div>
+          </div>
+          <div
+            class="text-center bg-gray-50 p-6 rounded-xl border border-gray-200"
+          >
+            <div class="text-4xl font-bold text-gray-900 mb-2">3</div>
+            <div class="text-gray-500">Python Frameworks</div>
+          </div>
+          <div
+            class="text-center bg-gray-50 p-6 rounded-xl border border-gray-200"
+          >
+            <div class="text-4xl font-bold text-gray-900 mb-2">2</div>
+            <div class="text-gray-500">Databases & Caches</div>
+          </div>
+          <div
+            class="text-center bg-gray-50 p-6 rounded-xl border border-gray-200"
+          >
+            <div class="text-4xl font-bold text-gray-900 mb-2">24/7</div>
+            <div class="text-gray-500">Learning Mode</div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+          <div
+            class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Build Something Amazing?
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="rounded-2xl text-center text-white">
-                <div class="text-4xl mb-4">🎮</div>
-                <h4 class="text-xl font-bold mb-2">Gaming Enthusiast</h4>
-                <p class="opacity-90">
-                  Love strategic games and RPGs. Currently mastering chess and
-                  exploring AI in gaming.
-                </p>
-              </div>
-              <div class=" p-6 rounded-2xl text-center text-white">
-                <div class="text-4xl mb-4">📚</div>
-                <h4 class="text-xl font-bold mb-2">Book Worm</h4>
-                <p class="opacity-90">
-                  Devour sci-fi novels and AI research papers. Favorite:
-                  "Superintelligence" by Nick Bostrom.
-                </p>
-              </div>
-              <div class=" p-6 rounded-2xl text-center text-white">
-                <div class="text-4xl mb-4">🏃‍♂️</div>
-                <h4 class="text-xl font-bold mb-2">Fitness Fanatic</h4>
-                <p class="opacity-90">
-                  Morning runs and meditation keep me balanced. Marathon
-                  training in progress!
-                </p>
-              </div>
-              <div class=" p-6 rounded-2xl text-center text-white">
-                <div class="text-4xl mb-4">🎵</div>
-                <h4 class="text-xl font-bold mb-2">Music Lover</h4>
-                <p class="opacity-90">
-                  Electronic and lo-fi beats fuel my coding sessions. EDM
-                  concerts are my recharge.
-                </p>
+            <p class="text-gray-500 mb-6 max-w-2xl mx-auto">
+              Let's build robust backend systems together. From REST APIs to
+              database design, I'm ready to architect the server-side of your
+              vision.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition duration-200"
+              >
+                Start a Project
+              </a>
+              <a
+                href="#projects"
+                class="px-8 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition duration-200"
+              >
+                View My Work
+              </a>
+            </div>
+
+            <!-- Fun Facts Section -->
+            <div class="mt-12">
+              <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">
+                Fun Facts & Hobbies
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                  class="bg-white p-6 rounded-xl text-center border border-gray-200"
+                >
+                  <div class="text-4xl mb-3">🎮</div>
+                  <h4 class="font-semibold text-gray-900 mb-2">
+                    Gaming Enthusiast
+                  </h4>
+                  <p class="text-gray-500 text-sm">
+                    Love strategic games and RPGs. Currently mastering chess and
+                    exploring AI in gaming.
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl text-center border border-gray-200"
+                >
+                  <div class="text-4xl mb-3">📚</div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Book Worm</h4>
+                  <p class="text-gray-500 text-sm">
+                    Devour sci-fi novels and AI research papers. Favorite:
+                    "Superintelligence" by Nick Bostrom.
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl text-center border border-gray-200"
+                >
+                  <div class="text-4xl mb-3">🏃‍♂️</div>
+                  <h4 class="font-semibold text-gray-900 mb-2">
+                    Fitness Fanatic
+                  </h4>
+                  <p class="text-gray-500 text-sm">
+                    Morning runs and meditation keep me balanced. Marathon
+                    training in progress!
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl text-center border border-gray-200"
+                >
+                  <div class="text-4xl mb-3">🎵</div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Music Lover</h4>
+                  <p class="text-gray-500 text-sm">
+                    Electronic and lo-fi beats fuel my coding sessions. EDM
+                    concerts are my recharge.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Blog/Learning Section -->
-  <section id="blog"
-  class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden">
- 
-  <!-- Animated Background -->
-  <div class="absolute inset-0">
-    <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-    <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay:2s"></div>
-    <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay:4s"></div>
-  </div>
- 
-  <div class="container mx-auto px-4 relative z-10">
- 
-    <!-- Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white">Python Backend Insights</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto rounded-full"></div>
-      <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
-        Exploring backend development through practical implementations, API design patterns,
-        and continuous learning with Python frameworks.
-      </p>
-    </div>
- 
-    <!-- Row 1 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
- 
-      <!-- Article 1 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">⚡</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">Python Backend Performance Optimization in 2026</h3>
-            <div class="flex items-center text-sm text-gray-400">
+    <!-- Blog/Learning Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Python Backend Insights
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+          <p class="text-lg text-gray-500 mt-4 max-w-3xl mx-auto">
+            Exploring backend development through practical implementations, API
+            design patterns, and continuous learning with Python frameworks.
+          </p>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <!-- Article 1 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              Python Backend Performance Optimization in 2026
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 9, 2026</span>
               <span class="mr-4">40 min read</span>
               <span>Performance</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Python is often dismissed as "too slow" for high-performance
+              backends — but that's wrong. With proper optimization, Python
+              backends handle millions of requests daily. This guide covers
+              profiling, database query optimization, async patterns,
+              Gunicorn/Uvicorn tuning, and Redis caching strategies proven in
+              production environments.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Performance</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://zeonedge.com/en/blog/python-backend-performance-optimization-2026-slow-to-blazing-fast',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Python is often dismissed as "too slow" for high-performance backends — but that's wrong. With proper
-          optimization, Python backends handle millions of requests daily. This guide covers profiling, database
-          query optimization, async patterns, Gunicorn/Uvicorn tuning, and Redis caching strategies proven in
-          production environments.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-indigo-300 mb-2">Key Optimization Areas:</h4>
-          <div class="text-gray-300 space-y-2">
-            <div class="flex items-center"><span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">1</span><span>Database Query Optimization (N+1, Indexing)</span></div>
-            <div class="flex items-center"><span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">2</span><span>Caching Strategies with Redis</span></div>
-            <div class="flex items-center"><span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">3</span><span>Async/Await Patterns for I/O-Bound Workloads</span></div>
-            <div class="flex items-center"><span class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs mr-3">4</span><span>Gunicorn/Uvicorn Worker Tuning</span></div>
-          </div>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-indigo-300 rounded-full text-sm">#Python</span>
-            <span class="px-3 py-1  text-purple-300 rounded-full text-sm">#Performance</span>
-          </div>
-          <button onclick="window.open('https://zeonedge.com/en/blog/python-backend-performance-optimization-2026-slow-to-blazing-fast','_blank')"
-            class="text-indigo-400 hover:text-indigo-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 2 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.2s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🐍</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">Python Backend Framework Decision Guide 2026</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 2 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              Python Backend Framework Decision Guide 2026
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 15, 2026</span>
               <span class="mr-4">25 min read</span>
               <span>Frameworks</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Three frameworks dominate Python backend in 2026: Django, FastAPI,
+              and Flask. FastAPI now has 91,900+ GitHub stars — surpassing both
+              Flask and Django — with developer adoption jumping from 29% (2024)
+              to 38% (2025) per JetBrains surveys. This guide uses a practical
+              decision tree to help you choose the right tool based on your
+              workload.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#FastAPI</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Django</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://rollbar.com/blog/python-backend-frameworks/',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Three frameworks dominate Python backend in 2026: Django, FastAPI, and Flask. FastAPI now has 91,900+
-          GitHub stars — surpassing both Flask and Django — with developer adoption jumping from 29% (2024) to
-          38% (2025) per JetBrains surveys. This guide uses a practical decision tree to help you choose the
-          right tool based on your workload.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-blue-300 mb-2">Framework Comparison:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>FastAPI:</strong> Async-first, 20,000+ req/s, AI/Data APIs</li>
-            <li>• <strong>Django:</strong> Enterprise SaaS, Instagram-scale proven</li>
-            <li>• <strong>Flask:</strong> Serverless, minimal footprint</li>
-            <li>• <strong>Alternatives:</strong> Falcon, Tornado, Litestar for niches</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-blue-300 rounded-full text-sm">#FastAPI</span>
-            <span class="px-3 py-1  text-cyan-300 rounded-full text-sm">#Django</span>
-          </div>
-          <button onclick="window.open('https://rollbar.com/blog/python-backend-frameworks/','_blank')"
-            class="text-blue-400 hover:text-blue-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 3 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.4s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🔑</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">API Authentication in 2026: JWT vs OAuth2 vs API Keys</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 3 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              API Authentication in 2026: JWT vs OAuth2 vs API Keys
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 28, 2026</span>
               <span class="mr-4">12 min read</span>
               <span>Security</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Every API you build needs authentication. In 2026, the choices are
+              clearer than ever: use short-lived JWTs + refresh tokens (15-min
+              access / 7-day refresh) for microservices, OAuth2 for third-party
+              access, and API Keys for public rate-limited APIs. Never store
+              JWTs in localStorage — use httpOnly cookies to prevent XSS theft.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#JWT</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Security</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://dev.to/0012303/api-authentication-in-2026-jwt-vs-oauth2-vs-api-keys-with-python-examples-1iof',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Every API you build needs authentication. In 2026, the choices are clearer than ever: use short-lived
-          JWTs + refresh tokens (15-min access / 7-day refresh) for microservices, OAuth2 for third-party access,
-          and API Keys for public rate-limited APIs. Never store JWTs in localStorage — use httpOnly cookies
-          to prevent XSS theft.
-        </p>
-        <div class="rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-green-300 mb-2">Auth Strategy Guide:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>JWT:</strong> Internal services, stateless, short-lived tokens</li>
-            <li>• <strong>OAuth2:</strong> "Login with Google/GitHub", delegated access</li>
-            <li>• <strong>API Keys:</strong> Public APIs, rate limiting, tracking</li>
-            <li>• <strong>Redis Sessions:</strong> Best balance of speed + revocation</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-green-300 rounded-full text-sm">#JWT</span>
-            <span class="px-3 py-1  text-teal-300 rounded-full text-sm">#Security</span>
-          </div>
-          <button onclick="window.open('https://dev.to/0012303/api-authentication-in-2026-jwt-vs-oauth2-vs-api-keys-with-python-examples-1iof','_blank')"
-            class="text-green-400 hover:text-green-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 4 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.6s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🚀</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">Python Asyncio Deep Dive — High-Performance Backend</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 4 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              Python Asyncio Deep Dive — High-Performance Backend
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 6, 2026</span>
               <span class="mr-4">8 min read</span>
               <span>Async Python</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Master Python asyncio for building high-performance backend
+              services. Learn async/await patterns, event loops, concurrent task
+              execution, and how to handle I/O-bound workloads efficiently
+              without blocking. Includes real patterns used by FastAPI's ASGI
+              foundation.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Asyncio</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Async</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://medium.com/@shalinivemuri1/python-asyncio-deep-dive-build-high-performance-backend-services-e4f7d22812da',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
         </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Master Python asyncio for building high-performance backend services. Learn async/await patterns,
-          event loops, concurrent task execution, and how to handle I/O-bound workloads efficiently without
-          blocking. Includes real patterns used by FastAPI's ASGI foundation.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-orange-300 mb-2">Asyncio Core Concepts:</h4>
-          <div class="text-gray-300 space-y-2">
-            <div class="flex items-center"><span class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs mr-3">1</span><span>Event Loop & Coroutine Basics</span></div>
-            <div class="flex items-center"><span class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs mr-3">2</span><span>async/await Syntax & Best Practices</span></div>
-            <div class="flex items-center"><span class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-xs mr-3">3</span><span>Task Groups & Concurrent Execution</span></div>
-          </div>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-orange-300 rounded-full text-sm">#Asyncio</span>
-            <span class="px-3 py-1  text-yellow-300 rounded-full text-sm">#Async</span>
-          </div>
-          <button onclick="window.open('https://medium.com/@shalinivemuri1/python-asyncio-deep-dive-build-high-performance-backend-services-e4f7d22812da','_blank')"
-            class="text-orange-400 hover:text-orange-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Row 2 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
- 
-      <!-- Article 5 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🔐</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">FastAPI: Build a Python REST API in 5 Steps (2026)</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+        <!-- Row 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <!-- Article 5 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              FastAPI: Build a Python REST API in 5 Steps (2026)
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 31, 2026</span>
               <span class="mr-4">18 min read</span>
               <span>FastAPI</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              FastAPI has become Python's fastest-growing web framework,
+              surpassing Flask in GitHub stars in late 2025. Version 0.135.x
+              brings streaming JSON Lines and strict content-type checking with
+              Python 3.10+ as the baseline. Build a production-ready REST API
+              with JWT auth, PostgreSQL via SQLAlchemy 2.0, automated tests, and
+              Docker deployment.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#FastAPI</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#REST</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://tech-insider.org/fastapi-tutorial-rest-api-python-2026/',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          FastAPI has become Python's fastest-growing web framework, surpassing Flask in GitHub stars in late
-          2025. Version 0.135.x brings streaming JSON Lines and strict content-type checking with Python 3.10+
-          as the baseline. Build a production-ready REST API with JWT auth, PostgreSQL via SQLAlchemy 2.0,
-          automated tests, and Docker deployment.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-purple-300 mb-2">What You'll Build:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>CRUD API:</strong> Full task management endpoints</li>
-            <li>• <strong>Auth:</strong> JWT + OAuth2PasswordBearer</li>
-            <li>• <strong>DB:</strong> PostgreSQL + SQLAlchemy 2.0 async</li>
-            <li>• <strong>Deploy:</strong> Docker + Uvicorn multi-worker</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-purple-300 rounded-full text-sm">#FastAPI</span>
-            <span class="px-3 py-1  text-indigo-300 rounded-full text-sm">#REST</span>
-          </div>
-          <button onclick="window.open('https://tech-insider.org/fastapi-tutorial-rest-api-python-2026/','_blank')"
-            class="text-purple-400 hover:text-purple-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 6 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.2s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🌐</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">API Development in 2026: REST and GraphQL with Python</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 6 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              API Development in 2026: REST and GraphQL with Python
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 20, 2026</span>
               <span class="mr-4">22 min read</span>
               <span>API Design</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Build secure REST and GraphQL APIs with Python. FastAPI handles
+              the REST layer at 10,000+ requests per second while Strawberry
+              powers GraphQL — with enterprise GraphQL adoption now at 50–60%.
+              Covers JWT auth with BOLA checks, rate limiting (API abuses surged
+              ~400%), PostgreSQL, CI/CD, containers, and observability.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#REST</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#GraphQL</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://www.nucamp.co/blog/api-development-in-2026-building-rest-and-graphql-apis-with-python',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Build secure REST and GraphQL APIs with Python. FastAPI handles the REST layer at 10,000+ requests
-          per second while Strawberry powers GraphQL — with enterprise GraphQL adoption now at 50–60%.
-          Covers JWT auth with BOLA checks, rate limiting (API abuses surged ~400%), PostgreSQL, CI/CD,
-          containers, and observability.
-        </p>
-        <div class="rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-cyan-300 mb-2">Production Stack:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>REST:</strong> FastAPI + Pydantic + OpenAPI schemas</li>
-            <li>• <strong>GraphQL:</strong> Strawberry, type-safe resolvers</li>
-            <li>• <strong>Auth:</strong> JWT + object-level (BOLA) checks</li>
-            <li>• <strong>DB:</strong> PostgreSQL + SQLAlchemy ORM</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-cyan-300 rounded-full text-sm">#REST</span>
-            <span class="px-3 py-1  text-blue-300 rounded-full text-sm">#GraphQL</span>
-          </div>
-          <button onclick="window.open('https://www.nucamp.co/blog/api-development-in-2026-building-rest-and-graphql-apis-with-python','_blank')"
-            class="text-cyan-400 hover:text-cyan-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 7 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.4s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">⚙️</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">Celery 2026: Background Tasks with Redis & Django</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 7 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              Celery 2026: Background Tasks with Redis & Django
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Apr 2, 2026</span>
               <span class="mr-4">14 min read</span>
               <span>Task Queues</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Celery 5.6 (Recovery) is the 2026 stable release — the default
+              distributed task queue for Python, supporting Python 3.9–3.13 with
+              critical memory-leak fixes. Learn to offload email sending, report
+              generation, and scheduled jobs so your Django/FastAPI views stay
+              fast. Redis serves as both message broker and result backend for
+              simple, high-speed setups.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Celery</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Redis</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://devtoolbox.dedyn.io/blog/celery-complete-guide',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Celery 5.6 (Recovery) is the 2026 stable release — the default distributed task queue for Python,
-          supporting Python 3.9–3.13 with critical memory-leak fixes. Learn to offload email sending, report
-          generation, and scheduled jobs so your Django/FastAPI views stay fast. Redis serves as both
-          message broker and result backend for simple, high-speed setups.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-red-300 mb-2">Celery 5.6 Highlights:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>Celery 5.6:</strong> Memory-leak fixes, Python 3.13 support</li>
-            <li>• <strong>Redis Broker:</strong> Fast transport + dual broker/backend</li>
-            <li>• <strong>Beat Scheduler:</strong> Cron-style periodic tasks</li>
-            <li>• <strong>Django Integration:</strong> django-celery-beat + results</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-red-300 rounded-full text-sm">#Celery</span>
-            <span class="px-3 py-1  text-pink-300 rounded-full text-sm">#Redis</span>
-          </div>
-          <button onclick="window.open('https://devtoolbox.dedyn.io/blog/celery-complete-guide','_blank')"
-            class="text-red-400 hover:text-red-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 8 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.6s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🐳</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">LLM Deployment with FastAPI + Docker + uv in 2026</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 8 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              LLM Deployment with FastAPI + Docker + uv in 2026
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Apr 1, 2026</span>
               <span class="mr-4">20 min read</span>
               <span>MLOps</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              FastAPI + Docker + uv + vLLM is now the gold standard for
+              production LLM services in 2026. FastAPI gives async performance,
+              vLLM delivers PagedAttention with continuous batching, and Docker
+              ensures reproducibility. Deploy your first production LLM endpoint
+              with the complete pipeline from this guide — scalable to hundreds
+              of GPUs with zero downtime.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#FastAPI</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#MLOps</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://www.pyinns.com/python/llm-and-generative-ai/llm-deployment-fastapi-docker-uv-python-2026-complete-guide-best-practices',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
         </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          FastAPI + Docker + uv + vLLM is now the gold standard for production LLM services in 2026.
-          FastAPI gives async performance, vLLM delivers PagedAttention with continuous batching,
-          and Docker ensures reproducibility. Deploy your first production LLM endpoint with the
-          complete pipeline from this guide — scalable to hundreds of GPUs with zero downtime.
-        </p>
-        <div class="bg-teal-900 bg-opacity-20 rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-teal-300 mb-2">Production LLM Stack:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>FastAPI 0.135+:</strong> Async, streaming JSON Lines</li>
-            <li>• <strong>uv:</strong> Ultra-fast Python package manager</li>
-            <li>• <strong>vLLM:</strong> PagedAttention + continuous batching</li>
-            <li>• <strong>Python 3.14:</strong> Recommended for ML workloads</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-teal-300 rounded-full text-sm">#FastAPI</span>
-            <span class="px-3 py-1  text-green-300 rounded-full text-sm">#MLOps</span>
-          </div>
-          <button onclick="window.open('https://www.pyinns.com/python/llm-and-generative-ai/llm-deployment-fastapi-docker-uv-python-2026-complete-guide-best-practices','_blank')"
-            class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Row 3 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
- 
-      <!-- Article 9 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🧠</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">7 Python Best Practices in 2026 Most Developers Still Get Wrong</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+        <!-- Row 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Article 9 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              7 Python Best Practices in 2026 Most Developers Still Get Wrong
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 1, 2026</span>
               <span class="mr-4">9 min read</span>
               <span>Best Practices</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Most Python developers don't fail because they lack syntax
+              knowledge — they fail because they ignore fundamentals that make
+              code production-ready. From one unhandled exception that caused a
+              payment startup 3 hours of debugging, to silent failures in
+              background workers: this post covers 7 practices that separate
+              scripts from systems in 2026.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#CleanCode</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://medium.com/h7w/7-python-best-practices-in-2026-that-most-developers-still-get-wrong-685592aafb9e',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
-        </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Most Python developers don't fail because they lack syntax knowledge — they fail because they
-          ignore fundamentals that make code production-ready. From one unhandled exception that caused
-          a payment startup 3 hours of debugging, to silent failures in background workers: this post
-          covers 7 practices that separate scripts from systems in 2026.
-        </p>
-        <div class=" rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-yellow-300 mb-2">Top Pitfalls Covered:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>Exception Handling:</strong> Never swallow errors silently</li>
-            <li>• <strong>Type Hints:</strong> Pydantic v2 for runtime validation</li>
-            <li>• <strong>Env Config:</strong> pydantic-settings, never hardcode secrets</li>
-            <li>• <strong>Testing:</strong> pytest + coverage before merging</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-yellow-300 rounded-full text-sm">#Python</span>
-            <span class="px-3 py-1  text-orange-300 rounded-full text-sm">#CleanCode</span>
-          </div>
-          <button onclick="window.open('https://medium.com/h7w/7-python-best-practices-in-2026-that-most-developers-still-get-wrong-685592aafb9e','_blank')"
-            class="text-yellow-400 hover:text-yellow-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-      <!-- Article 10 -->
-      <div class="bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 md:p-8 border border-gray-600 border-opacity-30 hover:bg-opacity-70 transition duration-500 fade-in-up group" style="animation-delay:.2s">
-        <div class="flex items-center mb-6">
-          <!-- <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🗺️</span>
-          </div> -->
-          <div>
-            <h3 class="text-2xl font-bold text-white mb-1">Full-Stack Python Developer Roadmap 2026</h3>
-            <div class="flex items-center text-sm text-gray-400">
+
+          <!-- Article 10 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              Full-Stack Python Developer Roadmap 2026
+            </h3>
+            <div class="flex items-center text-sm text-gray-400 mb-4">
               <span class="mr-4">Mar 18, 2026</span>
               <span class="mr-4">30 min read</span>
               <span>Career</span>
             </div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">
+              Companies in 2026 expect Python developers to go beyond writing
+              scripts — they look for engineers who understand backend
+              architecture, cloud deployment, DevOps, databases, security, and
+              AI integrations. FastAPI is the top Python framework for 2026:
+              fast, async-ready, and ideal for microservices. This roadmap takes
+              you from fundamentals to production-ready engineering.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Roadmap</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                  >#Career</span
+                >
+              </div>
+              <button
+                onclick="
+                  window.open(
+                    'https://www.javaguides.net/2025/12/full-stack-python-developer-roadmap-2026.html',
+                    '_blank',
+                  )
+                "
+                class="text-gray-700 hover:text-gray-900 font-medium text-sm transition duration-200"
+              >
+                Read More →
+              </button>
+            </div>
           </div>
         </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          Companies in 2026 expect Python developers to go beyond writing scripts — they look for engineers
-          who understand backend architecture, cloud deployment, DevOps, databases, security, and AI
-          integrations. FastAPI is the top Python framework for 2026: fast, async-ready, and ideal for
-          microservices. This roadmap takes you from fundamentals to production-ready engineering.
-        </p>
-        <div class="rounded-lg p-4 mb-6">
-          <h4 class="text-lg font-semibold text-pink-300 mb-2">Roadmap Phases:</h4>
-          <ul class="text-gray-300 space-y-1">
-            <li>• <strong>Phase 1:</strong> Python core + OOP + async foundations</li>
-            <li>• <strong>Phase 2:</strong> FastAPI/Django + PostgreSQL + SQLAlchemy</li>
-            <li>• <strong>Phase 3:</strong> Docker, CI/CD, cloud deployment (AWS/GCP)</li>
-            <li>• <strong>Phase 4:</strong> Security, esting, AI integrations</li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Let's Connect
+          </h2>
+          <div class="w-24 h-1 bg-gray-900 mx-auto rounded-full"></div>
+          <p class="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+            Ready to bring your ideas to life? Let's create something amazing
+            together!
+          </p>
         </div>
-        <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-            <span class="px-3 py-1  text-pink-300 rounded-full text-sm">#Roadmap</span>
-            <span class="px-3 py-1  text-rose-300 rounded-full text-sm">#Career</span>
-          </div>
-          <button onclick="window.open('https://www.javaguides.net/2025/12/full-stack-python-developer-roadmap-2026.html','_blank')"
-            class="text-pink-400 hover:text-pink-300 font-medium transition duration-300 group-hover:translate-x-2 transform">
-            Read More →
-          </button>
-        </div>
-      </div>
- 
-    </div>
-  </div>
-</section>
 
-  <!-- Contact Section -->
-  <section id="contact"
-    class="min-h-screen flex items-center bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 relative overflow-hidden">
-    <!-- Animated Background -->
-    <div class="absolute inset-0">
-      <div
-        class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse">
-      </div>
-      <div
-        class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
-        style="animation-delay: 3s"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4 text-white anime-text">
-          Let's Connect
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-        <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
-          Ready to bring your ideas to life? Let's create something amazing
-          together! 
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <!-- Contact Info -->
-        <div class="space-y-8 fade-in-up">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
           <div>
-            <h3 class="text-3xl font-bold text-white mb-6">Get In Touch</h3>
-            <p class="text-gray-300 text-lg leading-relaxed mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8">
               I'm always excited to work on new projects and collaborate with
               fellow developers. Whether you have a project in mind, need
-              consultation, or just want to chat about tech, feel free to
-              reach out!
+              consultation, or just want to chat about tech, feel free to reach
+              out!
             </p>
-          </div>
 
-          <!-- Contact Methods -->
-          <div class="space-y-6">
-            <div
-              class="flex items-center space-x-4 p-4 bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl border border-gray-600 border-opacity-30 hover:bg-opacity-20 transition duration-300">
+            <!-- Contact Methods -->
+            <div class="space-y-4">
               <div
-                class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                  </path>
-                </svg>
-              </div>
-              <div>
-                <div class="text-white font-semibold">Email</div>
-                <a href="mailto:arjunbhul5799@gmail.com"
-                  class="text-gray-300 hover:text-blue-400 transition duration-300">arjunbhul5799@gmail.com</a>
-              </div>
-            </div>
-
-            <div
-              class="flex items-center space-x-4 p-4 bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl border border-gray-600 border-opacity-30 hover:bg-opacity-20 transition duration-300">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-white font-semibold">LinkedIn</div>
-                <a href="https://linkedin.com/in/arjun-bhul-37656b398" target="_blank"
-                  class="text-gray-300 hover:text-blue-400 transition duration-300">linkedin.com/in/Ar-jun-fs9</a>
-              </div>
-            </div>
-
-            <div
-              class="flex items-center space-x-4 p-4 bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl border border-gray-600 border-opacity-30 hover:bg-opacity-20 transition duration-300">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-white font-semibold">GitHub</div>
-                <a href="https://github.com/Ar-jun-fs9" target="_blank"
-                  class="text-gray-300 hover:text-gray-400 transition duration-300">github.com/Ar-jun-fs9</a>
-              </div>
-            </div>
-
-            <div
-              class="flex items-center space-x-4 p-4 bg-transparent bg-opacity-10 backdrop-blur-lg rounded-2xl border border-gray-600 border-opacity-30 hover:bg-opacity-20 transition duration-300">
-              <div
-                class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                  </path>
-                </svg>
-              </div>
-              <div>
-                <div class="text-white font-semibold">Discord</div>
-                <div class="text-gray-300">arjun_b#5799</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Availability Status -->
-          <div class="bg-gradient-to-r from-green-500 to-teal-500 p-4 rounded-2xl text-center">
-            <div class="flex items-center justify-center space-x-2 text-white">
-              <div class="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-              <span class="font-semibold">Available for new projects</span>
-            </div>
-            <p class="text-green-100 mt-2">
-              Typically responds within 24 hours
-            </p>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="fade-in-up" style="animation-delay: 0.3s">
-          <div
-            class="bg-transparent bg-opacity-10 backdrop-blur-lg p-4 md:p-8 rounded-2xl border border-gray-600 border-opacity-30">
-            <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
-            <form id="contactForm" class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label for="name" class="block text-gray-300 font-medium mb-2">Name</label>
-                  <input type="text" id="name" name="name" required
-                    class="w-full px-4 py-3 bg-white bg-opacity-5 border border-gray-600 border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400"
-                    placeholder="Your Name" />
-                </div>
-                <div>
-                  <label for="email" class="block text-gray-300 font-medium mb-2">Email</label>
-                  <input type="email" id="email" name="email" required
-                    class="w-full px-4 py-3 bg-white bg-opacity-5 border border-gray-600 border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400"
-                    placeholder="your.email@example.com" />
-                </div>
-              </div>
-              <div>
-                <label for="subject" class="block text-gray-300 font-medium mb-2">Subject</label>
-                <input type="text" id="subject" name="subject" required
-                  class="w-full px-4 py-3 bg-white bg-opacity-5 border border-gray-600 border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400"
-                  placeholder="Project Discussion" />
-              </div>
-              <div>
-                <label for="message" class="block text-gray-300 font-medium mb-2">Message</label>
-                <textarea id="message" name="message" rows="5" required
-                  class="w-full px-4 py-3 bg-white bg-opacity-5 border border-gray-600 border-opacity-30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 resize-none"
-                  placeholder="Tell me about your project..."></textarea>
-              </div>
-              <button type="submit"
-                class="w-full px-6 py-2 border-2 bg-white text-black font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition duration-300">
-                <span class="flex items-center justify-center">
-                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
                   </svg>
-                  Send Message
-                </span>
-              </button>
-            </form>
-            <div id="formMessage" class="mt-4 text-center hidden">
-              <p class="text-green-400 font-medium">
-                Message sent successfully! 🎉
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Email</div>
+                  <a
+                    href="mailto:arjunbhul5799@gmail.com"
+                    class="text-gray-500 hover:text-gray-700 transition duration-300"
+                    >arjunbhul5799@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">LinkedIn</div>
+                  <a
+                    href="https://linkedin.com/in/arjun-bhul-37656b398"
+                    target="_blank"
+                    class="text-gray-500 hover:text-gray-700 transition duration-300"
+                    >linkedin.com/in/Ar-jun-fs9</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">GitHub</div>
+                  <a
+                    href="https://github.com/Ar-jun-fs9"
+                    target="_blank"
+                    class="text-gray-500 hover:text-gray-700 transition duration-300"
+                    >github.com/Ar-jun-fs9</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Discord</div>
+                  <div class="text-gray-500">arjun_b#5799</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Availability Status -->
+            <div class="bg-gray-900 p-4 rounded-xl text-center mt-6">
+              <div
+                class="flex items-center justify-center space-x-2 text-white"
+              >
+                <div
+                  class="w-3 h-3 bg-green-400 rounded-full animate-pulse"
+                ></div>
+                <span class="font-medium">Available for new projects</span>
+              </div>
+              <p class="text-gray-300 text-sm mt-2">
+                Typically responds within 24 hours
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-12 relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-      <!-- Removed floating icons -->
-    </div>
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div class="md:col-span-2">
-          <div class="text-2xl font-bold anime-text mb-4">Arjun Bhul</div>
-          <p class="text-gray-400 leading-relaxed mb-4">
-            Building robust backend systems with passion and precision.
-            Specializing in Python, Django, FastAPI, and scalable server architectures
-            that power modern applications.
-          </p>
-          <div class="flex space-x-4">
-            <a href="https://github.com/Ar-jun-fs9" target="_blank"
-              class="text-gray-400 hover:text-gray-500 transition duration-300">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-            </a>
-            <a href="https://linkedin.com/in/arjun-bhul-37656b398" target="_blank"
-              class="text-gray-400 hover:text-blue-400 transition duration-300">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
-            <a href="mailto:arjunbhul5799@gmail.com" class="text-gray-400 hover:text-red-400 transition duration-300">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#hero" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a>
-            </li>
-            <li>
-              <a href="#about" class="text-gray-400 hover:text-blue-400 transition duration-300">About</a>
-            </li>
-            <li>
-              <a href="#skills" class="text-gray-400 hover:text-blue-400 transition duration-300">Skills</a>
-            </li>
-            <li>
-              <a href="#projects" class="text-gray-400 hover:text-blue-400 transition duration-300">Projects</a>
-            </li>
-            <li>
-              <a href="#tech-stack" class="text-gray-400 hover:text-blue-400 transition duration-300">Tech Stack</a>
-            </li>
-            <li>
-              <a href="#blog" class="text-gray-400 hover:text-blue-400 transition duration-300">Blog</a>
-            </li>
-            <li>
-              <a href="#contact" class="text-gray-400 hover:text-blue-400 transition duration-300">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="text-lg font-semibold mb-4 text-white">Services</h4>
-          <ul class="space-y-2">
-            <li class="text-gray-400">REST API Development</li>
-            <li class="text-gray-400">Django & FastAPI Solutions</li>
-            <li class="text-gray-400">Database Design & Optimization</li>
-            <li class="text-gray-400">Backend Architecture</li>
-            <li class="text-gray-400">Technical Consultation</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; 2026 Arjun Bhul. All rights reserved.
-          </div>
-          <div class="flex items-center space-x-4 text-sm text-gray-400">
-            <span>Built by</span>
-            <div class="flex space-x-2">
-              <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-md">
-                Arjun Bhul
-              </span>
+          <!-- Contact Form -->
+          <div>
+            <div
+              class="bg-gray-50 p-6 md:p-8 rounded-xl border border-gray-200"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-6">
+                Send a Message
+              </h3>
+              <form id="contactForm" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-gray-600 font-medium mb-2"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-gray-900 focus:outline-none transition-colors duration-200"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-gray-600 font-medium mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-gray-900 focus:outline-none transition-colors duration-200"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-gray-600 font-medium mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-gray-900 focus:outline-none transition-colors duration-200"
+                    placeholder="Project Discussion"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-600 font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-gray-900 focus:outline-none transition-colors duration-200 resize-none"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition duration-200"
+                >
+                  <span class="flex items-center justify-center">
+                    <svg
+                      class="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      ></path>
+                    </svg>
+                    Send Message
+                  </span>
+                </button>
+              </form>
+              <div id="formMessage" class="mt-4 text-center hidden">
+                <p class="text-green-600 font-medium">
+                  Message sent successfully!
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Fun Quote -->
-      <div class="text-center mt-8">
-        <p class="text-gray-400 italic">
-          "Backend is the foundation — and I'm building it to scale."
-        </p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <div class="text-2xl font-bold mb-4">Arjun Bhul</div>
+            <p class="text-gray-400 leading-relaxed mb-4">
+              Building robust backend systems with passion and precision.
+              Specializing in Python, Django, FastAPI, and scalable server
+              architectures that power modern applications.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/Ar-jun-fs9"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/arjun-bhul-37656b398"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:arjunbhul5799@gmail.com"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#hero"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tech-stack"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Tech Stack</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Services</h4>
+            <ul class="space-y-2">
+              <li class="text-gray-400">REST API Development</li>
+              <li class="text-gray-400">Django & FastAPI Solutions</li>
+              <li class="text-gray-400">Database Design & Optimization</li>
+              <li class="text-gray-400">Backend Architecture</li>
+              <li class="text-gray-400">Technical Consultation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2026 Arjun Bhul. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4 text-sm text-gray-400">
+              <span>Built by</span>
+              <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded-md"
+                >Arjun Bhul</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Quote -->
+        <div class="text-center mt-8">
+          <p class="text-gray-400 italic">
+            "Backend is the foundation — and I'm building it to scale."
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Scripts -->
-  <script src="static/js/script.js"></script>
-</body>
-
+    <!-- Scripts -->
+    <script src="static/js/script.js"></script>
+  </body>
 </html>
