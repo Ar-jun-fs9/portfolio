@@ -191,83 +191,257 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center bg-white pt-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="text-center lg:text-left order-2 lg:order-1">
-            <div
-              class="inline-block px-4 py-1.5 bg-gray-100 text-gray-600 text-xs font-semibold tracking-wider uppercase rounded-full mb-6"
+    <section
+      id="hero"
+      class="min-h-screen flex items-center bg-gray-900 pt-16 pb-20 overflow-hidden"
+    >
+      <!-- Geometric Background -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-20 -left-20 w-96 h-96 bg-gray-800 rounded-full opacity-50"
+        ></div>
+        <div
+          class="absolute bottom-20 -right-20 w-80 h-80 bg-gray-700 rounded-full opacity-30"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/4 w-32 h-32 border border-gray-600 rotate-45 hidden sm:block"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-24 h-24 border border-gray-700 rotate-12 hidden sm:block"
+        ></div>
+        <!-- Diagonal Lines -->
+        <svg
+          class="absolute inset-0 w-full h-full opacity-5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="diagonal"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+              patternTransform="rotate(45)"
             >
-              Backend Python Developer
-            </div>
-            <h1
-              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
-            >
-              Building Scalable
-              <span class="text-gray-700">Backends</span>
-            </h1>
-            <p
-              class="text-lg sm:text-xl text-gray-500 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
-            >
-              Building scalable APIs, robust backends & intelligent systems with
-              Python
-            </p>
-            <div
-              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <a
-                href="#projects"
-                class="bg-gray-900 text-white px-8 py-3.5 rounded-lg font-medium hover:bg-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <line
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="40"
+                stroke="white"
+                stroke-width="1"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diagonal)" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Text Content -->
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center mt-5 space-x-2 mb-4 lg:mb-6">
+              <div class="w-8 lg:w-12 h-0.5 bg-gray-600"></div>
+              <span
+                class="text-gray-400 text-xs sm:text-sm tracking-widest uppercase"
+                >Backend Developer</span
               >
-                View My Backend Projects
-              </a>
-              <a
-                href="#contact"
-                class="border-2 border-gray-300 text-gray-700 px-8 py-3.5 rounded-lg font-medium hover:bg-gray-50 transition-all duration-200"
-              >
-                Let's Collaborate
-              </a>
             </div>
 
-            <!-- Tech Stack Preview -->
-            <div
-              class="flex flex-wrap justify-center lg:justify-start gap-3 mt-10"
+            <h1
+              class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-4 lg:mb-6"
             >
+              <span class="block">Arjun</span>
+              <span class="block text-gray-500">Bhul</span>
+            </h1>
+
+            <p
+              class="text-base sm:text-lg lg:text-xl text-gray-400 max-w-lg mb-6 lg:mb-8 leading-relaxed"
+            >
+              Building robust APIs, scalable backends & intelligent systems with
+              modern Python technologies
+            </p>
+
+            <div class="flex flex-wrap gap-2 lg:gap-3 mb-6 lg:mb-8">
               <span
-                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                class="px-3 lg:px-4 py-2 bg-gray-800 text-gray-300 rounded-lg text-xs lg:text-sm border border-gray-700"
                 >Django</span
               >
               <span
-                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                class="px-3 lg:px-4 py-2 bg-gray-800 text-gray-300 rounded-lg text-xs lg:text-sm border border-gray-700"
                 >FastAPI</span
               >
               <span
-                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                class="px-3 lg:px-4 py-2 bg-gray-800 text-gray-300 rounded-lg text-xs lg:text-sm border border-gray-700"
                 >PostgreSQL</span
               >
               <span
-                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                class="px-3 lg:px-4 py-2 bg-gray-800 text-gray-300 rounded-lg text-xs lg:text-sm border border-gray-700"
                 >Redis</span
               >
               <span
-                class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium"
+                class="px-3 lg:px-4 py-2 bg-gray-800 text-gray-300 rounded-lg text-xs lg:text-sm border border-gray-700"
                 >Docker</span
               >
             </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 lg:gap-5 mb-8 lg:mb-10">
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 text-sm lg:text-base"
+              >
+                <span>View Projects</span>
+                <svg
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 text-sm lg:text-base"
+              >
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div
+              class="grid grid-cols-3 gap-4 lg:gap-8 pt-6 lg:pt-8 border-t border-gray-800"
+            >
+              <div>
+                <div class="text-2xl lg:text-3xl font-bold text-white">15+</div>
+                <div class="text-gray-500 text-xs lg:text-sm">Projects</div>
+              </div>
+              <div>
+                <div class="text-2xl lg:text-3xl font-bold text-white">10+</div>
+                <div class="text-gray-500 text-xs lg:text-sm">APIs Built</div>
+              </div>
+              <div>
+                <div class="text-xl lg:text-3xl font-bold text-white">
+                  Fresher
+                </div>
+                <div class="text-gray-500 text-xs lg:text-sm">Years Exp</div>
+              </div>
+            </div>
           </div>
 
-          <div class="relative order-1 lg:order-2">
-            <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gray-100 rounded-full"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gray-200/30 rounded-full"></div> -->
-            <div class="relative">
+          <!-- Right Content - Code Block Style -->
+          <div class="relative order-2 lg:order-2">
+            <div
+              class="bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden"
+            >
+              <!-- Window Header -->
               <div
-                class="w-64 h-64 mx-auto rounded-2xl bg-gray-900 shadow-2xl flex items-center justify-center overflow-hidden"
+                class="bg-gray-900 px-3 lg:px-4 py-2 lg:py-3 flex items-center space-x-2"
               >
-                <img
-                  src="./assets/python.png"
-                  alt="Backend Python Developer"
-                  class="w-40 h-40 object-contain"
-                />
+                <div
+                  class="w-2 lg:w-3 h-2 lg:h-3 rounded-full bg-red-500"
+                ></div>
+                <div
+                  class="w-2 lg:w-3 h-2 lg:h-3 rounded-full bg-yellow-500"
+                ></div>
+                <div
+                  class="w-2 lg:w-3 h-2 lg:h-3 rounded-full bg-green-500"
+                ></div>
+                <div
+                  class="ml-3 lg:ml-4 text-gray-500 text-xs lg:text-sm font-mono"
+                >
+                  main.py
+                </div>
+              </div>
+
+              <!-- Code Content -->
+              <div
+                class="p-4 lg:p-6 font-mono text-xs lg:text-sm overflow-x-auto"
+              >
+                <!-- class BackendDev: -->
+                <div class="flex">
+                  <span class="text-purple-400">class</span>
+                  <span class="text-blue-400 ml-1">BackendDev</span>
+                  <span class="text-gray-400">:</span>
+                </div>
+
+                <!-- def __init__(self): -->
+                <div class="flex ml-3 lg:ml-4">
+                  <span class="text-purple-400">def</span>
+                  <span class="text-blue-300 ml-1">__init__</span>
+                  <span class="text-gray-400">(</span>
+                  <span class="text-purple-400">self</span>
+                  <span class="text-gray-400">):</span>
+                </div>
+
+                <!-- self.name = "Arjun Bhul" -->
+                <div class="flex ml-6 lg:ml-8">
+                  <span class="text-purple-400">self</span>
+                  <span class="text-gray-400">.</span>
+                  <span class="text-green-400">name</span>
+                  <span class="text-gray-400"> = </span>
+                  <span class="text-orange-400">"Arjun Bhul"</span>
+                </div>
+
+                <!-- self.skills = [ -->
+                <div class="flex ml-6 lg:ml-8">
+                  <span class="text-purple-400">self</span>
+                  <span class="text-gray-400">.</span>
+                  <span class="text-green-400">skills</span>
+                  <span class="text-gray-400"> = [</span>
+                </div>
+
+                <!-- skills list -->
+                <div class="flex ml-10 lg:ml-12">
+                  <span class="text-orange-400">"Django"</span>
+                  <span class="text-gray-400">, </span>
+                  <span class="text-orange-400">"FastAPI"</span>
+                </div>
+
+                <div class="flex ml-10 lg:ml-12">
+                  <span class="text-orange-400">"PostgreSQL"</span>
+                  <span class="text-gray-400">, </span>
+                  <span class="text-orange-400">"Redis"</span>
+                </div>
+
+                <div class="flex ml-10 lg:ml-12">
+                  <span class="text-orange-400">"Docker"</span>
+                  <span class="text-gray-400">, </span>
+                  <span class="text-orange-400">"Next.js"</span>
+                </div>
+
+                <!-- closing ] -->
+                <div class="flex ml-6 lg:ml-8">
+                  <span class="text-gray-400">]</span>
+                </div>
+
+                <!-- def build(self): -->
+                <div class="flex mt-3 lg:mt-4 ml-3 lg:ml-4">
+                  <span class="text-purple-400">def</span>
+                  <span class="text-blue-300 ml-1">build</span>
+                  <span class="text-gray-400">(</span>
+                  <span class="text-purple-400">self</span>
+                  <span class="text-gray-400">):</span>
+                </div>
+
+                <!-- return -->
+                <div class="flex ml-6 lg:ml-8">
+                  <span class="text-purple-400">return</span>
+                  <span class="text-gray-400"> </span>
+                  <span class="text-orange-400">"Amazing projects"</span>
+                </div>
+
+                <!-- comment -->
+                <div class="flex mt-3 lg:mt-4 ml-3 lg:ml-4">
+                  <span class="text-gray-500"
+                    ># Let's create great things!</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -275,15 +449,38 @@
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <div
-          class="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center"
-        >
-          <div
-            class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"
-          ></div>
+      <div
+        class="absolute bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div class="flex flex-col items-center text-gray-500">
+          <span class="text-xs mb-2 tracking-wider hidden sm:block"
+            >SCROLL</span
+          >
+          <div class="w-px h-8 bg-gray-600 relative">
+            <div
+              class="absolute top-0 w-full h-2 bg-white animate-scroll"
+            ></div>
+          </div>
         </div>
       </div>
+
+      <style>
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+
+          100% {
+            transform: translateY(24px);
+            opacity: 0;
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 1.5s ease-in-out infinite;
+        }
+      </style>
     </section>
 
     <!-- About Section -->
